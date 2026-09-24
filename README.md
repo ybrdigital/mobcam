@@ -83,4 +83,3 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 - **Support Email**: [info@ybrdigital.in](mailto:info@ybrdigital.in)
 - **Privacy Policy**: [ybrdigital.in/mobcam/privacy-policy](http://ybrdigital.in/mobcam/privacy-policy)
 - **Terms of Service**: [ybrdigital.in/mobcam/terms-of-service](https://ybrdigital.in/mobcam/terms-of-service)
-- **Trademarks**: OBS® and OBS Studio® are registered trademarks of the OBS Project. MobCam is an independent third-party tool.
