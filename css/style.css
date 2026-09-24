@@ -68,42 +68,70 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar */
 .navbar-custom {
-  background: rgba(8, 12, 17, 0.85);
+  background: rgba(8, 12, 17, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
   transition: all 0.3s ease;
-  padding: 14px 0;
+  padding: 12px 0;
 }
 
 .navbar-brand {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   gap: 10px;
   color: var(--text-main) !important;
   text-decoration: none;
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 .navbar-brand img {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 8px;
   box-shadow: 0 0 14px var(--primary-green-glow);
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .navbar-nav .nav-link {
   color: var(--text-muted);
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 8px 14px !important;
+  font-size: 0.92rem;
+  padding: 8px 12px !important;
+  white-space: nowrap !important;
   transition: color 0.2s ease;
+  line-height: 1.2;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--primary-green);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap !important;
+}
+
+.btn-nav {
+  padding: 8px 18px !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  border-radius: 8px !important;
+  line-height: 1.2 !important;
+  flex-shrink: 0;
 }
 
 /* Custom Buttons */
@@ -881,4 +909,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .max-w-700 {
   max-width: 700px;
+}
+
+.max-w-850 {
+  max-width: 850px;
 }

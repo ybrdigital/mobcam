@@ -38,9 +38,9 @@
        Sticky Navigation Bar
        ==================================================================== -->
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav">
-    <div class="container">
+    <div class="container-fluid px-lg-4 px-xl-5">
       <a class="navbar-brand" href="#home">
-        <img src="assets/img/logo.png" alt="MobCam Logo" width="34" height="34">
+        <img src="assets/img/logo.png" alt="MobCam Logo" width="32" height="32">
         <span>MobCam - OBS Camera</span>
       </a>
       <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,11 +58,11 @@
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         </ul>
 
-        <div class="d-flex align-items-center gap-2">
-          <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-green">
+        <div class="navbar-actions">
+          <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn btn-outline-green btn-nav">
             <i class="fab fa-google-play me-1"></i> Google Play
           </a>
-          <a href="#plugin" class="btn btn-sm btn-primary-green smooth-scroll">
+          <a href="#plugin" class="btn btn-primary-green btn-nav smooth-scroll">
             <i class="fas fa-download me-1"></i> Get Plugin
           </a>
         </div>
@@ -75,22 +75,22 @@
        ==================================================================== -->
   <section class="hero-section" id="home">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-9">
           <div class="hero-pill">
             <i class="fas fa-circle-check text-green"></i>
             <span>v1.0.0 Released &bull; Ultra-Low Latency Streaming Engine</span>
           </div>
 
-          <h1 class="hero-title">
+          <h1 class="hero-title max-w-850 mx-auto">
             Turn Your Android Phone into a <span class="text-gradient">Studio Camera</span> for OBS Studio
           </h1>
 
-          <p class="hero-desc">
+          <p class="hero-desc mx-auto mb-4">
             Broadcast crisp 1080p and 4K UHD video directly into OBS Studio with ultra-low latency over Wi-Fi or USB, auto 16:9 landscape orientation lock, and in-OBS remote controls right from your PC dock.
           </p>
 
-          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-4">
             <!-- Windows Plugin Setup -->
             <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green download-btn" download data-version="1.0.0">
               <i class="fab fa-windows fs-5"></i>
@@ -110,7 +110,7 @@
             </a>
           </div>
 
-          <div class="d-flex align-items-center gap-3">
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-4">
             <span class="text-muted-custom fs-sm">
               <i class="fab fa-google-play text-green me-1"></i> Android app available exclusively on Google Play
             </span>
@@ -121,7 +121,7 @@
           </div>
 
           <!-- Feature Badges Row -->
-          <div class="hero-badges-row">
+          <div class="hero-badges-row justify-content-center">
             <div class="hero-badge-item">
               <i class="fas fa-bolt text-green"></i> Ultra-Low Latency Mode
             </div>
@@ -133,54 +133,6 @@
             </div>
             <div class="hero-badge-item">
               <i class="fas fa-shield-halved text-green"></i> 100% Local P2P Stream
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="mockup-container">
-            <div class="mockup-header">
-              <div class="mockup-dots">
-                <span class="mockup-dot red"></span>
-                <span class="mockup-dot yellow"></span>
-                <span class="mockup-dot green"></span>
-              </div>
-              <span class="fw-bold font-monospace fs-xs"><i class="fas fa-broadcast-tower text-green me-1"></i>OBS Studio &bull; MobCam Source</span>
-              <span class="badge bg-dark border border-secondary text-dim fs-xs">60.00 FPS</span>
-            </div>
-
-            <div class="mockup-screen" style="aspect-ratio: 16/9; background: radial-gradient(circle at center, #1b2838 0%, #080c11 100%);">
-              <!-- Live Visual Graphic Preview -->
-              <div class="d-flex flex-column align-items-center justify-content-center h-100 p-4 text-center">
-                <div class="position-relative mb-3">
-                  <img src="assets/img/logo.png" alt="MobCam Logo" style="width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 0 30px var(--primary-green-glow);">
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-dark">
-                    LIVE
-                  </span>
-                </div>
-                <h5 class="fw-bold text-white mb-1">MobCam - OBS Camera</h5>
-                <p class="text-muted-custom fs-xs mb-3 font-monospace">Ultra HD &bull; 60 FPS &bull; Studio Audio</p>
-                <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-dim fs-xs">
-                  <i class="fas fa-bolt text-green"></i>
-                  <span>Ultra-Low Latency Mode (<span class="text-green font-monospace fw-bold">Active</span>)</span>
-                </div>
-              </div>
-
-              <!-- Stream Overlay Indicators -->
-              <div class="stream-overlay-ui">
-                <span class="stream-pill live"><i class="fas fa-circle me-1" style="font-size: 0.6rem;"></i> REC / LIVE</span>
-                <span class="stream-pill">1920 &times; 1080</span>
-                <span class="stream-pill">48 kHz Stereo</span>
-              </div>
-
-              <!-- In-OBS Quick Dock Preview -->
-              <div class="dock-preview-pill">
-                <i class="fas fa-sliders fs-6"></i>
-                <div>
-                  <span class="d-block" style="font-size: 0.7rem; color: #8E9BAE; line-height: 1;">OBS DOCK CONTROL</span>
-                  <span class="d-block" style="font-size: 0.8rem; font-weight: 800; color: #FFF;">Torch &bull; Zoom 2x &bull; AF Mode</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
