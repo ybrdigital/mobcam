@@ -506,19 +506,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checksum-box {
-  background: #090E14;
-  border: 1px solid var(--border-subtle);
+  background: #111822;
+  border: 1px solid rgba(0, 230, 118, 0.3);
   border-radius: 8px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: #94A3B8;
+  font-size: 0.85rem;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   word-break: break-all;
   margin-top: 14px;
+}
+
+.checksum-box code {
+  color: #FFFFFF !important;
+  background: transparent !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.checksum-label {
+  color: var(--primary-green) !important;
+  font-weight: 800;
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 .btn-copy-checksum {

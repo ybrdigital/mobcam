@@ -18,18 +18,15 @@ const PLUGIN_RELEASES = [
     installerPath: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
     installerSize: "2.1 MB",
     sha256: "19501575BAE2017A5F1E6FBACAE27838ADD7AAA55A66EFF548BA09D22545449D",
-    apkPath: "assets/downloads/v1.0.0/MobCam-Android-v1.0.0.apk",
-    apkSize: "4.5 MB",
-    apkSha256: "411478394952495AC26B9693923008CFF5E03E6EEAD55EB235B00977776B9F27",
     changelog: [
-      { type: "badge-feat", label: "NEW", text: "Production-ready Windows 64-bit installer for OBS Studio 28.0 - 31.0+." },
-      { type: "badge-feat", label: "NEW", text: "Ultra-low latency streaming engine (<30ms wired USB, <50ms 5GHz Wi-Fi)." },
-      { type: "badge-feat", label: "NEW", text: "Hardware-accelerated YUV420 color rendering pipeline with zero chroma ghosting." },
-      { type: "badge-feat", label: "NEW", text: "Integrated OBS Quick Controls web dock hosted natively on http://localhost:4752/." },
-      { type: "badge-feat", label: "NEW", text: "Auto 16:9 landscape orientation lock prevents vertical pillarboxing." },
-      { type: "badge-opt",  label: "OPTIMIZATION", text: "Dynamic network reconnect: automatic IP recovery upon router handoffs." },
-      { type: "badge-fix",  label: "FIX", text: "Centered clean white watermark in OBS for free users with pure transparency." },
-      { type: "badge-sec",  label: "SECURITY", text: "Isolated peer-to-peer TCP transmission without third-party cloud servers." }
+      "Production-ready Windows 64-bit installer for OBS Studio 28.0 - 31.0+.",
+      "Ultra-low latency streaming engine (<30ms wired USB, <50ms 5GHz Wi-Fi).",
+      "Hardware-accelerated YUV420 color rendering pipeline with zero chroma ghosting.",
+      "Integrated OBS Quick Controls web dock hosted natively on http://localhost:4752/.",
+      "Auto 16:9 landscape orientation lock prevents vertical pillarboxing.",
+      "Dynamic network reconnect: automatic IP recovery upon router handoffs.",
+      "Centered clean white watermark in OBS with pure transparency.",
+      "Isolated peer-to-peer TCP transmission without third-party cloud servers."
     ]
   }
 ];
@@ -55,25 +52,16 @@ function renderReleasesArchive() {
 
   $container.empty();
 
-  PLUGIN_RELEASES.forEach((rel, index) => {
+  PLUGIN_RELEASES.forEach((rel) => {
     const isLatest = rel.isLatest;
     const latestBadge = isLatest
       ? `<span class="badge-latest ms-2"><i class="fas fa-sparkles me-1"></i>LATEST STABLE</span>`
       : `<span class="badge bg-secondary ms-2">ARCHIVED</span>`;
 
+    // Render plain bullet points without badges as requested
     let changelogHtml = "";
-    rel.changelog.forEach(item => {
-      let badgeClass = "badge-feat";
-      if (item.label === "FIX") badgeClass = "badge-fix";
-      if (item.label === "OPTIMIZATION") badgeClass = "badge-opt";
-      if (item.label === "SECURITY") badgeClass = "badge-sec";
-
-      changelogHtml += `
-        <li>
-          <span class="change-tag ${badgeClass}">${item.label}</span>
-          <span>${item.text}</span>
-        </li>
-      `;
+    rel.changelog.forEach(text => {
+      changelogHtml += `<li>${text}</li>`;
     });
 
     const releaseCardHtml = `
@@ -88,10 +76,7 @@ function renderReleasesArchive() {
           </div>
           <div class="d-flex align-items-center gap-2">
             <a href="${rel.installerPath}" class="btn btn-sm btn-primary-green download-btn" download data-version="${rel.version}">
-              <i class="fas fa-download me-1"></i> Download Setup.exe (${rel.installerSize})
-            </a>
-            <a href="${rel.apkPath}" class="btn btn-sm btn-outline-secondary text-light" download title="Download Android APK">
-              <i class="fab fa-android text-green me-1"></i> APK (${rel.apkSize})
+              <i class="fas fa-download me-1"></i> Download Windows Installer (${rel.installerSize})
             </a>
           </div>
         </div>
@@ -107,8 +92,8 @@ function renderReleasesArchive() {
 
         <div class="checksum-box">
           <div class="d-flex align-items-center gap-2 flex-grow-1 overflow-hidden">
-            <span class="text-green fw-bold fs-xs"><i class="fas fa-shield-halved me-1"></i>SHA-256:</span>
-            <code class="text-muted fs-xs text-truncate">${rel.sha256}</code>
+            <span class="checksum-label"><i class="fas fa-shield-halved me-1"></i>SHA-256:</span>
+            <code class="text-truncate">${rel.sha256}</code>
           </div>
           <button class="btn-copy-checksum" data-hash="${rel.sha256}" title="Copy SHA-256 Checksum">
             <i class="far fa-copy me-1"></i><span>Copy</span>

@@ -5,17 +5,17 @@
 **Support Email**: `info@ybrdigital.in`  
 **GitHub Repository**: [https://github.com/ybrdigital/mobcam](https://github.com/ybrdigital/mobcam)  
 **Live Website URL**: [https://ybrdigital.github.io/mobcam/](https://ybrdigital.github.io/mobcam/)  
-**Target Platform**: Android (Mobile App) & Windows 10/11 64-bit (OBS Studio 28.0 - 31.0+ Plugin)  
+**Target Platform**: Android (Mobile App via Google Play) & Windows 10/11 64-bit (OBS Studio 28.0 - 31.0+ Plugin)  
 
 ---
 
 ## 1. Executive Summary
 
 This document details the production architecture, release management lifecycle, and frontend implementation for the official website of **MobCam - OBS Camera**. The website serves as the primary distribution hub for:
-1. **The OBS Studio Plugin Installer**: Direct Windows `.exe` setup package and portable binaries with cryptographic verification (SHA-256).
+1. **The OBS Studio Plugin Installer**: Direct Windows `.exe` setup package with cryptographic verification (SHA-256).
 2. **Multi-Version Release Archive**: A future-proof version management architecture allowing users to browse, download, and review release notes for any current or historical version of the OBS plugin.
-3. **The Android Mobile App**: Direct links to the Google Play Store (`com.ybrdigital.mobcam`) and standalone APK downloads for sideloading.
-4. **Comprehensive Documentation**: Interactive step-by-step setup guides (Wi-Fi, USB Tethering, OBS Web Dock), technical specifications, free vs pro matrices, and legal policies (Privacy Policy & Terms of Service).
+3. **The Android Mobile App**: Direct links to the Google Play Store (`com.ybrdigital.mobcam`) where the mobile client is exclusively distributed.
+4. **Comprehensive Documentation**: Interactive step-by-step setup guides (Wi-Fi, USB Tethering, OBS Web Dock), technical specifications, complete feature capabilities catalog, and legal policies (Privacy Policy & Terms of Service).
 
 ---
 
@@ -37,18 +37,15 @@ All plugin releases are defined in a structured array of version objects. When a
   installerPath: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
   installerSize: "2.1 MB",
   sha256: "19501575BAE2017A5F1E6FBACAE27838ADD7AAA55A66EFF548BA09D22545449D",
-  apkPath: "assets/downloads/v1.0.0/MobCam-Android-v1.0.0.apk",
-  apkSize: "4.5 MB",
-  apkSha256: "411478394952495AC26B9693923008CFF5E03E6EEAD55EB235B00977776B9F27",
   changelog: [
-    { type: "feat", text: "Initial production release of MobCam OBS Studio Plugin." },
-    { type: "feat", text: "Hardware-accelerated YUV420 color rendering for OBS Studio 28.0 - 31.0+." },
-    { type: "feat", text: "Ultra-low latency streaming engine (<30ms wired USB, <50ms 5GHz Wi-Fi)." },
-    { type: "feat", text: "Integrated OBS Quick Controls web dock at http://localhost:4752/." },
-    { type: "feat", text: "Automatic phone discovery via local subnet beacon on port 4747." },
-    { type: "feat", text: "Dynamic network IP auto-recovery without stream disruption." },
-    { type: "fix", text: "Centered clean white watermark with zero edge alpha glitches for free users." },
-    { type: "security", text: "Isolated local peer-to-peer TCP transmission without third-party cloud routing." }
+    "Production-ready Windows 64-bit installer for OBS Studio 28.0 - 31.0+.",
+    "Ultra-low latency streaming engine (<30ms wired USB, <50ms 5GHz Wi-Fi).",
+    "Hardware-accelerated YUV420 color rendering pipeline with zero chroma ghosting.",
+    "Integrated OBS Quick Controls web dock hosted natively on http://localhost:4752/.",
+    "Auto 16:9 landscape orientation lock prevents vertical pillarboxing.",
+    "Dynamic network reconnect: automatic IP recovery upon router handoffs.",
+    "Centered clean white watermark in OBS with pure transparency.",
+    "Isolated peer-to-peer TCP transmission without third-party cloud servers."
   ]
 }
 ```
@@ -60,7 +57,6 @@ assets/
 └── downloads/
     ├── v1.0.0/
     │   ├── MobCam-OBS-Plugin-v1.0.0-Setup.exe
-    │   ├── MobCam-Android-v1.0.0.apk
     │   └── SHA256SUMS.txt
     ├── v1.0.1/ (future)
     └── v1.1.0/ (future)
@@ -69,20 +65,20 @@ assets/
 ### 2.3 UI Capabilities for Version Management
 - **Hero & Primary CTA**: Always targets the latest stable release (`v1.0.0`) with instant one-click download.
 - **Dedicated Releases Archive Section (`#releases`)**:
-  - Highlights the **Latest Release** with detailed badges, installation paths, file size, direct setup download, and one-click SHA-256 hash copying.
-  - Lists **All Historical Releases** with expandable release notes and direct downloads for legacy OBS installations or rollbacks.
-  - Version filter/dropdown allows switching between active releases and past archives.
+  - Highlights the **Latest Release** with detailed badges, installation paths, file size, direct setup download, and one-click SHA-256 hash copying (rendered in high-contrast white `#FFFFFF`).
+  - Lists **All Historical Releases** with clean bullet-point release notes (no cluttering category tags).
 
 ---
 
 ## 3. Technical Specifications & Protocols
 
 ### 3.1 Android Mobile Application
+- **Distribution**: Exclusively via Google Play Store (`com.ybrdigital.mobcam`).
 - **Minimum OS**: Android 8.0 Oreo (API Level 26).
 - **Recommended OS**: Android 10+ (API Level 29+) with Camera2 HAL3 / CameraX 1.4.
 - **Video Compression**: Hardware MediaCodec AVC (H.264), HEVC (H.265), MJPEG fallback.
-- **Resolutions**: 720p HD, 1080p Full HD, 4K UHD (2160p on Pro tier).
-- **Framerate**: 30 FPS standard, 60 FPS ultra-smooth (Pro tier).
+- **Resolutions**: 720p HD, 1080p Full HD, 4K UHD (2160p).
+- **Framerate**: 30 FPS standard, 60 FPS ultra-smooth.
 - **Audio Stream**: 48 kHz stereo AAC audio with timestamp synchronizer.
 - **Orientation Control**: Intelligent auto 16:9 landscape locking upon stream initialization.
 - **Network Ports**:
@@ -92,7 +88,6 @@ assets/
 ### 3.2 OBS Studio Plugin (Windows)
 - **Host OS**: Windows 10 (64-bit) or Windows 11 (64-bit).
 - **OBS Studio Compatibility**: OBS Studio 28.0, 29.0, 30.0, 31.0+ (64-bit).
-- **Architecture**: Native C++ plugin utilizing OBS graphics and audio subsystems.
 - **Installation Method**:
   - Automated NSIS Installer (`MobCam-OBS-Plugin-v1.0.0-Setup.exe`) auto-detecting `%ProgramFiles%\obs-studio\obs-plugins\64bit` and `%APPDATA%\obs-studio\plugins`.
 - **Integrated Browser Dock**: OBS menu `Docks` -> `MobCam Controls` targeting `http://localhost:4752/` for zero-friction remote control of phone flash, zoom, focus, and exposure.
@@ -108,7 +103,7 @@ assets/
   - **Camera & Microphone Permissions**: Strictly utilized in real-time to generate the OBS input source.
 - **Terms of Service**:
   - **License**: End-user license for personal and professional broadcasting.
-  - **Billing & Subscriptions**: In-app purchases and subscriptions are handled securely through Google Play Billing.
+  - **Distribution**: All app distribution handled securely through Google Play.
   - **Support Contact**: `info@ybrdigital.in` managed by Yash Rayjada.
 
 ---

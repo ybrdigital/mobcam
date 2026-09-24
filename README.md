@@ -39,8 +39,9 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 | Artifact | File | Size | Checksum (SHA-256) |
 |---|---|---|---|
 | **Windows OBS Plugin Setup** | [MobCam-OBS-Plugin-v1.0.0-Setup.exe](assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe) | 2.1 MB | `19501575BAE2017A5F1E6FBACAE27838ADD7AAA55A66EFF548BA09D22545449D` |
-| **Android APK Sideload** | [MobCam-Android-v1.0.0.apk](assets/downloads/v1.0.0/MobCam-Android-v1.0.0.apk) | 4.5 MB | `411478394952495AC26B9693923008CFF5E03E6EEAD55EB235B00977776B9F27` |
-| **Google Play Store** | [Install on Google Play](https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam) | — | Official store release |
+| **Android Application** | [Install on Google Play](https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam) | — | Official Google Play Store Release |
+
+> *Note: The MobCam Android mobile application is distributed exclusively through the Google Play Store.*
 
 ---
 
@@ -60,7 +61,7 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 
 ## ⚙️ Quick Connection Guide
 
-1. **Install Android App**: Install MobCam from Google Play or sideload the APK.
+1. **Install Android App**: Install MobCam exclusively from the [Google Play Store](https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam).
 2. **Install Windows Plugin**: Run `MobCam-OBS-Plugin-v1.0.0-Setup.exe` with OBS Studio closed.
 3. **Connect via USB (Lowest Latency)**:
    - Connect phone via USB cable.
