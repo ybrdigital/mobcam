@@ -5,7 +5,7 @@
   <br><br>
   <h3>Turn Your Android Phone into a Studio-Grade Camera for OBS Studio</h3>
   <p>
-    <strong>Sub-30ms Wired USB Latency &bull; 4K UHD &bull; 60 FPS &bull; In-OBS Remote Controls</strong>
+    <strong>Ultra-Low Latency Mode &bull; 4K UHD &bull; 60 FPS &bull; In-OBS Remote Controls</strong>
   </p>
   <p>
     <a href="https://ybrdigital.github.io/mobcam/"><img src="https://img.shields.io/badge/Live%20Website-GitHub%20Pages-00E676?style=for-the-badge&logo=github" alt="Live Site"></a>
@@ -23,7 +23,7 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 
 ## 🚀 Key Highlights
 
-- **Sub-30ms Wired USB Latency**: Connect over USB tethering for ultra-low latency streaming with zero frame drops or Wi-Fi jitter.
+- **Ultra-Low Latency Mode**: Optimized real-time streaming engine engineered for both 5 GHz Wi-Fi and wired USB tethering with zero jitter.
 - **In-OBS Quick Controls Dock**: Integrated browser dock (`http://localhost:4752/`) inside OBS Studio (`Docks > MobCam Controls`) to toggle flash, zoom presets (1x, 1.5x, 2x), autofocus modes, and exposure compensation remotely.
 - **Auto 16:9 Landscape Lock**: Automatically locks your video orientation into horizontal widescreen when streaming starts, preventing black vertical pillarboxes.
 - **Studio Quality**: Supports 1080p and 4K UHD at up to 60 FPS with hardware-accelerated AVC/H.264, HEVC/H.265, and MJPEG encoding.

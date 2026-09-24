@@ -20,7 +20,7 @@ const PLUGIN_RELEASES = [
     sha256: "19501575BAE2017A5F1E6FBACAE27838ADD7AAA55A66EFF548BA09D22545449D",
     changelog: [
       "Production-ready Windows 64-bit installer for OBS Studio 28.0 - 31.0+.",
-      "Ultra-low latency streaming engine (<30ms wired USB, <50ms 5GHz Wi-Fi).",
+      "Ultra-low latency streaming engine supporting both high-speed Wi-Fi and USB.",
       "Hardware-accelerated YUV420 color rendering pipeline with zero chroma ghosting.",
       "Integrated OBS Quick Controls web dock hosted natively on http://localhost:4752/.",
       "Auto 16:9 landscape orientation lock prevents vertical pillarboxing.",
