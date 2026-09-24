@@ -81,6 +81,6 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 
 - **Developer**: Yash Rayjada
 - **Support Email**: [info@ybrdigital.in](mailto:info@ybrdigital.in)
-- **Privacy Policy**: Zero cloud recording, zero personal data collection, 100% peer-to-peer transmission.
-- **Terms of Service**: Standard end-user license for personal and professional broadcasting.
+- **Privacy Policy**: [ybrdigital.in/mobcam/privacy-policy](http://ybrdigital.in/mobcam/privacy-policy)
+- **Terms of Service**: [ybrdigital.in/mobcam/terms-of-service](https://ybrdigital.in/mobcam/terms-of-service)
 - **Trademarks**: OBS® and OBS Studio® are registered trademarks of the OBS Project. MobCam is an independent third-party tool.

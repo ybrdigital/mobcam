@@ -96,12 +96,12 @@ assets/
 
 ## 4. Legal Compliance & Privacy Framework
 
-- **Privacy Policy**:
+- **Privacy Policy**: [http://ybrdigital.in/mobcam/privacy-policy](http://ybrdigital.in/mobcam/privacy-policy)
   - **Zero Data Collection**: No user tracking, no personal information collection, and no analytics SDKs.
   - **100% Peer-to-Peer**: Video and audio frames are streamed solely over the local Wi-Fi or USB tethered network between the user's Android device and Windows PC.
   - **No Cloud Servers**: Frames are never uploaded, stored, or processed on external cloud infrastructure.
   - **Camera & Microphone Permissions**: Strictly utilized in real-time to generate the OBS input source.
-- **Terms of Service**:
+- **Terms of Service**: [https://ybrdigital.in/mobcam/terms-of-service](https://ybrdigital.in/mobcam/terms-of-service)
   - **License**: End-user license for personal and professional broadcasting.
   - **Distribution**: All app distribution handled securely through Google Play.
   - **Support Contact**: `info@ybrdigital.in` managed by Yash Rayjada.
