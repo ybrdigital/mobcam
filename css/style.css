@@ -899,6 +899,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 230, 118, 0.2);
 }
 
+.download-toast p {
+  color: #ffffff !important;
+}
+
 .hover-green {
   transition: color 0.2s ease;
 }

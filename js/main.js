@@ -184,7 +184,7 @@ function showDownloadToast(version) {
         </div>
         <div class="toast-body-content">
           <h6 class="mb-1 text-white fw-bold">Downloading MobCam Plugin v${version}</h6>
-          <p class="mb-0 text-muted fs-xs">
+          <p class="mb-0 text-white fs-xs">
             Run the setup installer, restart OBS Studio, and add a new <strong>"MobCam Source"</strong> in your scene.
           </p>
         </div>
