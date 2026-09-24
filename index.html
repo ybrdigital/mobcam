@@ -177,7 +177,7 @@
             </div>
             <h4 class="feature-title">In-OBS Quick Controls</h4>
             <p class="feature-desc">
-              Control your phone's camera settings directly from inside OBS Studio via our integrated browser dock (<code class="text-green">http://localhost:4752/</code>). Adjust zoom, torch, autofocus, and exposure in real-time.
+              Control your phone's camera settings directly from inside OBS Studio via our integrated browser dock. Adjust zoom, torch, autofocus, and exposure in real-time.
             </p>
           </div>
         </div>
@@ -277,111 +277,65 @@
   </section>
 
   <!-- ====================================================================
-       OBS Plugin Highlights & Dock Showcase
+       OBS Plugin Highlights
        ==================================================================== -->
   <section class="py-5" id="plugin" style="background: linear-gradient(180deg, transparent 0%, rgba(0, 230, 118, 0.02) 50%, transparent 100%);">
     <div class="container py-4">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-            Official Windows OBS Plugin
-          </span>
-          <h2 class="h1 fw-bold text-white mb-3">Native Integration with OBS Studio</h2>
-          <p class="text-muted-custom mb-4">
-            No virtual camera drivers, no desktop capture overhead. MobCam registers directly as a native source inside OBS Studio for zero-copy YUV420 GPU rendering and synced 48 kHz stereo audio.
-          </p>
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
+          Official Windows OBS Plugin
+        </span>
+        <h2 class="h1 fw-bold text-white mb-3">Native Integration with OBS Studio</h2>
+        <p class="text-muted-custom">
+          No virtual camera drivers, no desktop capture overhead. MobCam registers directly as a native source inside OBS Studio for zero-copy YUV420 GPU rendering and synced 48 kHz stereo audio.
+        </p>
+      </div>
 
-          <div class="d-flex flex-column gap-3 mb-4">
-            <div class="d-flex align-items-start gap-3">
-              <div class="step-num"><i class="fas fa-check"></i></div>
-              <div>
-                <h5 class="text-white mb-1">Direct Scene Source</h5>
-                <p class="text-muted-custom fs-sm mb-0">Add <code>MobCam Source</code> directly from the OBS Sources menu. Select your Android phone with automatic discovery.</p>
-              </div>
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-check"></i>
             </div>
-
-            <div class="d-flex align-items-start gap-3">
-              <div class="step-num"><i class="fas fa-sliders"></i></div>
-              <div>
-                <h5 class="text-white mb-1">In-OBS Browser Dock (<span class="text-green font-monospace">http://localhost:4752/</span>)</h5>
-                <p class="text-muted-custom fs-sm mb-0">Open <code>Docks</code> &gt; <code>MobCam Controls</code> inside OBS Studio to toggle flashlight, change zoom (1x, 1.5x, 2x), adjust EV, or switch cameras without touching your phone.</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-start gap-3">
-              <div class="step-num"><i class="fas fa-volume-high"></i></div>
-              <div>
-                <h5 class="text-white mb-1">Synchronized 48 kHz Audio</h5>
-                <p class="text-muted-custom fs-sm mb-0">Captures high-fidelity microphone audio with sub-millisecond timestamp synchronization directly into the OBS Audio Mixer.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="d-flex flex-wrap align-items-center gap-3">
-            <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green download-btn" download data-version="1.0.0">
-              <i class="fas fa-download"></i> Download Windows Installer (.exe)
-            </a>
-            <a href="#releases" class="btn-outline-green smooth-scroll">
-              <i class="fas fa-archive"></i> Release Archive
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="mockup-container p-4">
-            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom border-secondary pb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-sliders text-green"></i>
-                <span class="text-white fw-bold">OBS Quick Controls Dock</span>
-              </div>
-              <span class="badge bg-dark border border-secondary text-green font-monospace fs-xs">Port 4752</span>
-            </div>
-
-            <div class="bg-dark p-3 rounded-3 border border-secondary mb-3">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="text-muted-custom fs-xs text-uppercase fw-bold">Active Camera Target</span>
-                <span class="badge bg-success-subtle text-green border border-success fs-xs">Connected</span>
-              </div>
-              <p class="text-white font-monospace fs-sm mb-0">Android Phone Camera (Connected)</p>
-            </div>
-
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="p-3 bg-dark rounded-3 border border-secondary text-center">
-                  <i class="fas fa-lightbulb text-warning mb-2 fs-5"></i>
-                  <div class="text-white fw-bold fs-sm">Torch / Flash</div>
-                  <span class="text-muted-custom fs-xs">Remote Toggle</span>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="p-3 bg-dark rounded-3 border border-secondary text-center">
-                  <i class="fas fa-magnifying-glass-plus text-green mb-2 fs-5"></i>
-                  <div class="text-white fw-bold fs-sm">Zoom Presets</div>
-                  <span class="text-muted-custom fs-xs">1x &bull; 1.5x &bull; 2.0x</span>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="p-3 bg-dark rounded-3 border border-secondary text-center">
-                  <i class="fas fa-sun text-info mb-2 fs-5"></i>
-                  <div class="text-white fw-bold fs-sm">EV Compensation</div>
-                  <span class="text-muted-custom fs-xs">Manual Slider</span>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="p-3 bg-dark rounded-3 border border-secondary text-center">
-                  <i class="fas fa-crosshairs text-danger mb-2 fs-5"></i>
-                  <div class="text-white fw-bold fs-sm">Autofocus Mode</div>
-                  <span class="text-muted-custom fs-xs">Continuous / Lock</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="text-muted-custom fs-xs text-center mb-0">
-              <i class="fas fa-info-circle text-green me-1"></i>
-              Accessible in OBS Studio via <code>Docks &gt; MobCam Controls</code> or any browser at <code>http://localhost:4752/</code>.
+            <h4 class="feature-title">Direct Scene Source</h4>
+            <p class="feature-desc">
+              Add <code>MobCam Source</code> directly from the OBS Sources menu. Select your Android phone with automatic discovery.
             </p>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-sliders"></i>
+            </div>
+            <h4 class="feature-title">In-OBS Browser Dock</h4>
+            <p class="feature-desc">
+              Open <code>Docks</code> &gt; <code>MobCam Controls</code> inside OBS Studio to toggle flashlight, change zoom, adjust EV, or switch cameras without touching your phone.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-volume-high"></i>
+            </div>
+            <h4 class="feature-title">Synchronized 48 kHz Audio</h4>
+            <p class="feature-desc">
+              Captures high-fidelity microphone audio with sub-millisecond timestamp synchronization directly into the OBS Audio Mixer.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+        <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green download-btn" download data-version="1.0.0">
+          <i class="fas fa-download"></i> Download Windows Installer (.exe)
+        </a>
+        <a href="#releases" class="btn-outline-green smooth-scroll">
+          <i class="fas fa-archive"></i> Release Archive
+        </a>
       </div>
     </div>
   </section>
