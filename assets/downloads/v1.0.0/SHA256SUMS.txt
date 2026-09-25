@@ -1,1 +1,1 @@
-ce26767d697dffae7f4353533999642c3503d944d39d396e50ec6d3f32e1dae1  MobCam-OBS-Plugin-v1.0.0-Setup.exe
+a33cd424e25d638b5ba3920264be76c270f2b61fd7e0014817aea5d5f84bfeeb  MobCam-OBS-Plugin-v1.0.0-Setup.exe
