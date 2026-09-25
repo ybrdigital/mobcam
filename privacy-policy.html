@@ -4,737 +4,301 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - MobCam - OBS Camera</title>
-  <meta name="description" content="Privacy Policy for MobCam - OBS Camera Android App and Windows OBS Studio Plugin developed by Yash Rayjada.">
   <style>
-    :root {
-      --bg-color: #0b0f17;
-      --card-bg: #141c2b;
-      --card-border: #232f45;
-      --text-main: #e2e8f0;
-      --text-muted: #94a3b8;
-      --accent-green: #00ff88;
-      --accent-cyan: #00d2ff;
-      --accent-blue: #3b82f6;
-      --accent-gold: #f59e0b;
-      --accent-red: #ef4444;
-      --code-bg: #070a10;
-      --nav-hover: #1e293b;
-      --sidebar-width: 280px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.7;
-      font-size: 15px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(180deg, #162032 0%, var(--bg-color) 100%);
-      border-bottom: 1px solid var(--card-border);
-      padding: 40px 24px 30px;
-      position: relative;
-    }
-
-    .header-inner {
-      max-width: 1200px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      max-width: 900px;
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      padding: 25px 20px;
+      background-color: #ffffff;
     }
-
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .logo-badge {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #00ff88, #00b4d8);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 22px;
-      color: #0b0f17;
-      box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-    }
-
-    .brand-title h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: -0.5px;
-    }
-
-    .brand-title p {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .doc-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      font-size: 12px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .badge-green {
-      background: rgba(0, 255, 136, 0.12);
-      color: var(--accent-green);
-      border: 1px solid rgba(0, 255, 136, 0.3);
-    }
-
-    .badge-blue {
-      background: rgba(59, 130, 246, 0.12);
-      color: #60a5fa;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    .badge-btn {
-      background: var(--card-bg);
-      color: var(--text-main);
-      border: 1px solid var(--card-border);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .badge-btn:hover {
-      background: var(--nav-hover);
-      border-color: var(--accent-cyan);
-    }
-
-    /* Layout */
-    .layout-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      display: grid;
-      grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
-      gap: 40px;
-      align-items: start;
-    }
-
-    /* Sidebar Navigation */
-    .sidebar {
-      position: sticky;
-      top: 30px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 20px;
-      max-height: calc(100vh - 60px);
-      overflow-y: auto;
-    }
-
-    .sidebar h3 {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--card-border);
-    }
-
-    .toc-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .toc-link {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 13px;
-      padding: 6px 10px;
-      border-radius: 6px;
-      display: block;
-      transition: all 0.15s ease;
-      line-height: 1.4;
-    }
-
-    .toc-link:hover {
-      color: var(--accent-green);
-      background: var(--nav-hover);
-      padding-left: 14px;
-    }
-
-    /* Main Content */
-    .content {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 40px;
-    }
-
-    .lead-banner {
-      background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 210, 255, 0.08) 100%);
-      border: 1px solid rgba(0, 255, 136, 0.25);
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 36px;
-    }
-
-    .lead-banner h2 {
-      font-size: 18px;
-      color: #ffffff;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .lead-banner p {
-      color: #cbd5e1;
-      font-size: 14px;
-      margin: 0;
-    }
-
-    section {
-      margin-bottom: 44px;
-      scroll-margin-top: 40px;
-    }
-
-    section:last-child {
-      margin-bottom: 0;
-    }
-
-    h2.section-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 16px;
+    h1 {
+      font-size: 28px;
+      color: #111111;
+      border-bottom: 2px solid #222222;
       padding-bottom: 10px;
-      border-bottom: 1px solid var(--card-border);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-
-    .sec-number {
-      background: rgba(0, 255, 136, 0.15);
-      color: var(--accent-green);
-      font-size: 13px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 6px;
+    h2 {
+      font-size: 20px;
+      color: #222222;
+      border-bottom: 1px solid #dddddd;
+      padding-bottom: 6px;
+      margin-top: 30px;
+      margin-bottom: 12px;
     }
-
-    p {
-      color: var(--text-main);
-      margin-bottom: 16px;
-    }
-
-    ul, ol {
-      margin-bottom: 20px;
-      padding-left: 24px;
-      color: var(--text-main);
-    }
-
-    li {
+    h3 {
+      font-size: 16px;
+      color: #333333;
+      margin-top: 18px;
       margin-bottom: 8px;
     }
-
-    strong {
-      color: #ffffff;
+    p {
+      margin-bottom: 12px;
     }
-
-    /* Alert Boxes */
-    .callout {
-      border-left: 4px solid var(--accent-blue);
-      background: rgba(59, 130, 246, 0.08);
-      border-radius: 0 10px 10px 0;
-      padding: 18px 20px;
-      margin: 20px 0;
+    ul, ol {
+      margin-top: 6px;
+      margin-bottom: 16px;
+      padding-left: 28px;
     }
-
-    .callout-title {
-      font-weight: 700;
-      font-size: 14px;
-      color: #93c5fd;
+    li {
       margin-bottom: 6px;
     }
-
-    .callout-green {
-      border-left-color: var(--accent-green);
-      background: rgba(0, 255, 136, 0.08);
+    strong {
+      color: #111111;
     }
-
-    .callout-green .callout-title {
-      color: var(--accent-green);
-    }
-
-    .callout-gold {
-      border-left-color: var(--accent-gold);
-      background: rgba(245, 158, 11, 0.08);
-    }
-
-    .callout-gold .callout-title {
-      color: #fcd34d;
-    }
-
-    /* Tables */
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 20px 0 26px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-    }
-
     table {
       width: 100%;
       border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #cccccc;
+      padding: 10px 12px;
       text-align: left;
-      font-size: 13.5px;
+      vertical-align: top;
     }
-
     th {
-      background: #0f1624;
-      color: #f8fafc;
-      font-weight: 600;
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--card-border);
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #111111;
     }
-
-    td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--card-border);
-      color: var(--text-main);
+    tr:nth-child(even) {
+      background-color: #fafafa;
     }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:hover td {
-      background: rgba(255, 255, 255, 0.02);
-    }
-
     code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 12.5px;
-      background: var(--code-bg);
-      color: #38bdf8;
-      padding: 2px 6px;
-      border-radius: 4px;
-      border: 1px solid #1e293b;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--card-border);
-      padding: 30px 24px;
-      text-align: center;
-      color: var(--text-muted);
+      font-family: Consolas, Monaco, monospace;
       font-size: 13px;
-      margin-top: 40px;
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
     }
-
-    footer a {
-      color: var(--accent-green);
-      text-decoration: none;
+    .meta-box {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      font-size: 14px;
     }
-
-    footer a:hover {
+    .highlight-box {
+      background-color: #eef7ee;
+      border-left: 4px solid #2e7d32;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+    .warning-box {
+      background-color: #fff8e1;
+      border-left: 4px solid #f57f17;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+    a {
+      color: #0d47a1;
       text-decoration: underline;
-    }
-
-    /* Print Styles */
-    @media print {
-      body {
-        background: #ffffff;
-        color: #000000;
-      }
-      header, .sidebar, .badge-btn, footer {
-        display: none !important;
-      }
-      .layout-container {
-        display: block;
-        padding: 0;
-      }
-      .content {
-        border: none;
-        padding: 0;
-        background: transparent;
-      }
-      h2.section-title {
-        color: #000000;
-        border-bottom: 1px solid #ccc;
-      }
-      .callout, .lead-banner {
-        border: 1px solid #ccc;
-        background: #f9f9f9;
-        color: #000;
-      }
-      th {
-        background: #eee;
-        color: #000;
-      }
-      td {
-        color: #000;
-      }
-      code {
-        background: #eee;
-        color: #000;
-        border: none;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .layout-container {
-        grid-template-columns: 1fr;
-      }
-      .sidebar {
-        position: static;
-        max-height: none;
-      }
-      .content {
-        padding: 24px 18px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="header-inner">
-      <div class="brand-group">
-        <div class="logo-badge">M</div>
-        <div class="brand-title">
-          <h1>Privacy Policy</h1>
-          <p>MobCam - OBS Camera &bull; Android App &amp; OBS Studio Plugin</p>
-        </div>
-      </div>
-      <div class="doc-meta">
-        <span class="badge badge-green">Effective Date: September 25, 2026</span>
-        <span class="badge badge-blue">Version 1.0.0</span>
-        <button class="badge badge-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Layout Container -->
-  <div class="layout-container">
-
-    <!-- Navigation Sidebar -->
-    <aside class="sidebar">
-      <h3>Table of Contents</h3>
-      <ul class="toc-list">
-        <li><a class="toc-link" href="#sec-overview">1. Overview &amp; Controller</a></li>
-        <li><a class="toc-link" href="#sec-zero-cloud">2. Zero Cloud Streaming Architecture</a></li>
-        <li><a class="toc-link" href="#sec-permissions">3. Android Permissions &amp; Usage</a></li>
-        <li><a class="toc-link" href="#sec-data-collection">4. Data We Collect &amp; Process</a></li>
-        <li><a class="toc-link" href="#sec-plugin">5. Windows OBS Plugin &amp; Dock</a></li>
-        <li><a class="toc-link" href="#sec-sub-billing">6. Subscriptions &amp; Payments</a></li>
-        <li><a class="toc-link" href="#sec-diagnostics">7. Diagnostics &amp; Crash Reports</a></li>
-        <li><a class="toc-link" href="#sec-retention">8. Data Retention &amp; Security</a></li>
-        <li><a class="toc-link" href="#sec-children">9. Children's Privacy (COPPA)</a></li>
-        <li><a class="toc-link" href="#sec-gdpr-ccpa">10. GDPR &amp; CCPA/CPRA Rights</a></li>
-        <li><a class="toc-link" href="#sec-updates">11. Changes to This Policy</a></li>
-        <li><a class="toc-link" href="#sec-contact">12. Contact &amp; Legal Notices</a></li>
-      </ul>
-      <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--card-border);">
-        <a href="terms-of-service.html" class="toc-link" style="color: var(--accent-cyan); font-weight: 600;">
-          &rarr; Read Terms of Service
-        </a>
-      </div>
-    </aside>
-
-    <!-- Main Legal Text -->
-    <main class="content">
-
-      <!-- Executive Privacy Guarantee Banner -->
-      <div class="lead-banner">
-        <h2>🔒 Our Core Privacy Guarantee</h2>
-        <p>
-          <strong>MobCam - OBS Camera</strong> does not record, upload, monitor, or transmit your video stream or microphone audio to any external cloud servers. All video and audio streams travel strictly peer-to-peer over your private local Wi-Fi network or direct USB cable to your personal computer running OBS Studio.
-        </p>
-      </div>
-
-      <!-- Section 1 -->
-      <section id="sec-overview">
-        <h2 class="section-title"><span class="sec-number">1</span> Overview &amp; Data Controller</h2>
-        <p>
-          This Privacy Policy explains how <strong>Yash Rayjada</strong> ("Developer", "we", "us", or "our"), trading as <strong>YBR Digital</strong> (website: <a href="https://www.ybrdigital.in" target="_blank" style="color:var(--accent-green); text-decoration:none;">www.ybrdigital.in</a>), collects, handles, stores, and protects information when you install and use:
-        </p>
-        <ul>
-          <li><strong>MobCam - OBS Camera</strong> (the Android mobile client application available on Google Play); and</li>
-          <li><strong>MobCam OBS Studio Plugin</strong> (the Windows 64-bit plugin, installer, and integrated web dock running on your desktop PC).</li>
-        </ul>
-        <p>
-          We are committed to absolute transparency and data minimization. We treat your personal data with the highest standards of confidentiality and in strict compliance with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA/CPRA), the Google Play Developer Policy, and global privacy standards.
-        </p>
-      </section>
-
-      <!-- Section 2 -->
-      <section id="sec-zero-cloud">
-        <h2 class="section-title"><span class="sec-number">2</span> Zero Cloud Streaming Architecture</h2>
-        <p>
-          Unlike cloud-dependent webcam solutions, MobCam is engineered entirely around a <strong>Local Peer-to-Peer (P2P) Architecture</strong>:
-        </p>
-        <div class="callout callout-green">
-          <div class="callout-title">Direct Local Transmission</div>
-          When you broadcast video and audio from your smartphone to OBS Studio:
-          <ol style="margin-top: 8px; margin-bottom: 0;">
-            <li>Video frames are compressed natively on your phone using hardware-accelerated H.264/AVC encoders.</li>
-            <li>Microphone audio is compressed using low-overhead AAC encoding (48 kHz).</li>
-            <li>The combined media stream is delivered across your private local area network (LAN) or direct USB cable via TCP port <code>4747</code> directly into your OBS Studio video pipeline.</li>
-          </ol>
-        </div>
-        <p>
-          <strong>No intermediate cloud servers exist.</strong> We do not operate relay servers, video storage servers, or media proxies. Neither the developer nor any third party has technical access to your camera frames, microphone audio, live broadcast feed, or recorded media.
-        </p>
-      </section>
-
-      <!-- Section 3 -->
-      <section id="sec-permissions">
-        <h2 class="section-title"><span class="sec-number">3</span> Android Permissions &amp; Usage</h2>
-        <p>
-          To function as an ultra-low latency professional streaming camera, the Android application requests specific runtime permissions. Each permission is utilized solely for its declared functional purpose:
-        </p>
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Android Permission</th>
-                <th>Type</th>
-                <th>Justification &amp; Usage Purpose</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>android.permission.CAMERA</code></td>
-                <td>Dangerous / Runtime</td>
-                <td>Required to capture the live camera sensor feed, provide digital/optical zoom, activate the device torch, adjust exposure compensation (EV), and manage manual white balance.</td>
-              </tr>
-              <tr>
-                <td><code>android.permission.RECORD_AUDIO</code></td>
-                <td>Dangerous / Runtime</td>
-                <td>Required to capture live microphone audio (48kHz AAC) when phone audio streaming is enabled by the user. Audio is never stored on disk.</td>
-              </tr>
-              <tr>
-                <td><code>android.permission.INTERNET</code></td>
-                <td>Normal</td>
-                <td>Required to open local network sockets (TCP port 4747) to stream frames to OBS Studio on your local network, and communicate with Google Play Billing / RevenueCat for license verification.</td>
-              </tr>
-              <tr>
-                <td><code>android.permission.ACCESS_NETWORK_STATE</code><br><code>android.permission.ACCESS_WIFI_STATE</code></td>
-                <td>Normal</td>
-                <td>Required to verify local Wi-Fi connectivity, discover the local IP address for socket binding, and listen for OBS Studio UDP discovery broadcasts.</td>
-              </tr>
-              <tr>
-                <td><code>android.permission.FOREGROUND_SERVICE</code><br><code>android.permission.FOREGROUND_SERVICE_CAMERA</code><br><code>android.permission.FOREGROUND_SERVICE_MICROPHONE</code></td>
-                <td>Special / Service</td>
-                <td>Allows the streaming pipeline to stay active uninterrupted when your phone screen turns off, dims, or when switching briefly to another application during live streaming.</td>
-              </tr>
-              <tr>
-                <td><code>android.permission.POST_NOTIFICATIONS</code></td>
-                <td>Runtime (API 33+)</td>
-                <td>Displays the required persistent foreground notification indicating that an active camera streaming session is running.</td>
-              </tr>
-              <tr>
-                <td><code>android.permission.WAKE_LOCK</code></td>
-                <td>Normal</td>
-                <td>Prevents the smartphone CPU from entering deep sleep during prolonged live broadcasts.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Section 4 -->
-      <section id="sec-data-collection">
-        <h2 class="section-title"><span class="sec-number">4</span> Data We Collect &amp; Process</h2>
-        
-        <h3 style="font-size:16px; color:#ffffff; margin: 18px 0 10px;">A. Information Stored Locally on Your Device</h3>
-        <p>
-          MobCam stores non-sensitive user preferences exclusively inside your phone's private Android <code>SharedPreferences</code> container. This includes:
-        </p>
-        <ul>
-          <li>Camera resolution preference (e.g., 1080p, 4K, 720p).</li>
-          <li>Target framerate (30 FPS or 60 FPS).</li>
-          <li>Video bitrate setting (e.g., 8,000 kbps to 35,000 kbps).</li>
-          <li>Latency mode selection (Ultra-Low Latency vs. Balanced).</li>
-          <li>Audio transmission toggle (On / Off).</li>
-          <li>Studio camera parameters (Torch state, Exposure value, White balance mode).</li>
-        </ul>
-        <p>This data never leaves your device and is permanently deleted if you uninstall the application or clear app data.</p>
-
-        <h3 style="font-size:16px; color:#ffffff; margin: 18px 0 10px;">B. Information We DO NOT Collect</h3>
-        <ul>
-          <li><strong>No User Accounts:</strong> You do not need to register, provide an email address, or create a password to use MobCam.</li>
-          <li><strong>No Personal Identifiers:</strong> We do not collect names, home addresses, phone numbers, or social media handles.</li>
-          <li><strong>No Location Data:</strong> We do not access GPS, cellular geolocation, or coarse location coordinates.</li>
-          <li><strong>No Photos or Files:</strong> MobCam has zero access to your device's photo gallery, internal storage, or personal files.</li>
-          <li><strong>No Biometric or Facial Recognition:</strong> Camera frames are decoded as raw color pixels without facial recognition, facial tracking, or biometric profiling.</li>
-        </ul>
-      </section>
-
-      <!-- Section 5 -->
-      <section id="sec-plugin">
-        <h2 class="section-title"><span class="sec-number">5</span> Windows OBS Plugin &amp; Web Dock</h2>
-        <p>
-          The <strong>MobCam OBS Studio Plugin</strong> (Windows 64-bit) runs locally as a native DLL module inside OBS Studio. Its privacy parameters are as follows:
-        </p>
-        <ul>
-          <li><strong>Local Loopback Web Server:</strong> The plugin launches an embedded lightweight HTTP server listening strictly on <code>http://localhost:4752/</code> (IPv4 loopback <code>127.0.0.1</code>). This server is inaccessible from external networks or the internet; it only serves the OBS Quick Controls dock on your local machine.</li>
-          <li><strong>Zero Outbound Telemetry:</strong> The desktop plugin contains no telemetry, user tracking, phone-home mechanisms, or automated usage analytics.</li>
-          <li><strong>Inno Setup Windows Installer:</strong> The installer executable (<code>MobCam-OBS-Plugin-v1.0.0-Setup.exe</code>) checks for OBS Studio installation paths, stops running instances of OBS with user consent to prevent file-lock errors, installs files into <code>%ProgramData%\obs-studio\plugins\mobcam\</code>, and registers the browser dock in your user profile (<code>%APPDATA%\obs-studio\user.ini</code>). It collects zero personal telemetry.</li>
-        </ul>
-      </section>
-
-      <!-- Section 6 -->
-      <section id="sec-sub-billing">
-        <h2 class="section-title"><span class="sec-number">6</span> In-App Subscriptions &amp; Payment Processing</h2>
-        <p>
-          MobCam offers an optional auto-renewing subscription and in-app purchase named <strong>MobCam Pro</strong>, unlocking watermark-free video, 4K streaming, 60 FPS, ultra-low latency, and the Studio Camera Suite.
-        </p>
-        <div class="callout callout-gold">
-          <div class="callout-title">Zero Access to Financial Credentials</div>
-          All financial transactions, credit card handling, bank processing, tax collection, and billing management are executed strictly and exclusively by <strong>Google Play In-App Billing</strong>. The developer does not process, receive, or store credit card numbers, PayPal details, or billing addresses.
-        </div>
-        <p>
-          To maintain active license entitlements across app updates and reinstalls, we integrate <strong>RevenueCat Inc.</strong> (a leading in-app subscription infrastructure provider). RevenueCat processes:
-        </p>
-        <ul>
-          <li>An anonymous, randomly generated App User ID.</li>
-          <li>Google Play transaction identifier and product ID.</li>
-          <li>Purchase timestamp and subscription expiration date.</li>
-        </ul>
-        <p>
-          For more information on RevenueCat's data protection standards, please consult the <a href="https://www.revenuecat.com/privacy" target="_blank" style="color:var(--accent-green); text-decoration:none;">RevenueCat Privacy Policy</a>.
-        </p>
-      </section>
-
-      <!-- Section 7 -->
-      <section id="sec-diagnostics">
-        <h2 class="section-title"><span class="sec-number">7</span> Diagnostics &amp; Crash Reports</h2>
-        <p>
-          To ensure reliable broadcast stability and resolve critical video decoding bugs across thousands of Android device configurations, MobCam uses <strong>Google Firebase Crashlytics</strong> (provided by Google LLC).
-        </p>
-        <p>
-          When an unhandled application crash occurs, Firebase Crashlytics automatically collects anonymized diagnostic logs:
-        </p>
-        <ul>
-          <li>Stack trace and code exception details.</li>
-          <li>Smartphone brand, device model, and CPU architecture.</li>
-          <li>Android OS version and security patch level.</li>
-          <li>RAM usage and internal storage state at the time of failure.</li>
-        </ul>
-        <p>
-          These diagnostics contain zero video frames, audio samples, or personal identity markers, and are used solely to debug stability issues. For details, refer to the <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent-green); text-decoration:none;">Google Privacy Policy</a>.
-        </p>
-      </section>
-
-      <!-- Section 8 -->
-      <section id="sec-retention">
-        <h2 class="section-title"><span class="sec-number">8</span> Data Retention &amp; Security</h2>
-        <p>
-          Because MobCam operates on a zero-cloud, client-side model:
-        </p>
-        <ul>
-          <li><strong>No Server Retention:</strong> We store no personal databases, no stream archives, and no user profiles on any external servers.</li>
-          <li><strong>Device Security:</strong> Communication between your smartphone and PC occurs over local TCP sockets. When connected via USB cable (ADB port forwarding), data packets never traverse wireless airwaves.</li>
-          <li><strong>Instant Deletion:</strong> You can completely erase all locally stored preferences at any moment by navigating to <em>Settings &rarr; Apps &rarr; MobCam &rarr; Clear Data</em> on your Android device, or by uninstalling the app.</li>
-        </ul>
-      </section>
-
-      <!-- Section 9 -->
-      <section id="sec-children">
-        <h2 class="section-title"><span class="sec-number">9</span> Children's Privacy (COPPA Compliance)</h2>
-        <p>
-          MobCam is designed and marketed for general audiences, content creators, live streamers, and video broadcast professionals. We do not knowingly collect, solicit, or maintain personal information from children under the age of 13 (or under 16 in the European Union).
-        </p>
-        <p>
-          If you believe that a minor has provided us with personal information without parental consent, please contact us immediately at <a href="mailto:info@ybrdigital.in" style="color:var(--accent-green); text-decoration:none;">info@ybrdigital.in</a> and we will take immediate steps to delete any such data.
-        </p>
-      </section>
-
-      <!-- Section 10 -->
-      <section id="sec-gdpr-ccpa">
-        <h2 class="section-title"><span class="sec-number">10</span> GDPR &amp; CCPA/CPRA Privacy Rights</h2>
-        <p>
-          Depending on your country or state of residence (including the European Economic Area, United Kingdom, and State of California), you hold specific statutory rights under data protection laws:
-        </p>
-        <ul>
-          <li><strong>Right to Know / Access:</strong> You have the right to request details regarding the personal information we process.</li>
-          <li><strong>Right to Erasure / Deletion:</strong> You have the right to request deletion of any personal data held about you. (As noted, MobCam does not maintain cloud databases of personal data).</li>
-          <li><strong>Right to Opt-Out of Sale / Sharing:</strong> We do not sell, rent, or trade your personal information to third parties, data brokers, or advertising networks.</li>
-          <li><strong>Right to Non-Discrimination:</strong> We will never discriminate against you, diminish your service quality, or alter subscription pricing for exercising your privacy rights.</li>
-        </ul>
-        <p>
-          To exercise any of your statutory rights, please contact our Data Controller at <a href="mailto:info@ybrdigital.in" style="color:var(--accent-green); text-decoration:none;">info@ybrdigital.in</a>.
-        </p>
-      </section>
-
-      <!-- Section 11 -->
-      <section id="sec-updates">
-        <h2 class="section-title"><span class="sec-number">11</span> Changes to This Privacy Policy</h2>
-        <p>
-          We may update this Privacy Policy periodically to reflect enhancements in application functionality, updates to the Windows plugin, or changes in legal and regulatory frameworks.
-        </p>
-        <p>
-          When modifications occur, we will update the "Effective Date" at the top of this document and publish the latest version on our official website (<a href="https://www.ybrdigital.in" target="_blank" style="color:var(--accent-green); text-decoration:none;">www.ybrdigital.in</a>). We encourage users to review this page periodically to remain informed about our data protection practices.
-        </p>
-      </section>
-
-      <!-- Section 12 -->
-      <section id="sec-contact">
-        <h2 class="section-title"><span class="sec-number">12</span> Contact &amp; Legal Notices</h2>
-        <p>
-          If you have questions, feedback, or legal inquiries regarding this Privacy Policy or our software privacy practices, please contact us directly:
-        </p>
-        <div style="background:#0b111a; border:1px solid var(--card-border); border-radius:12px; padding:20px; margin-top:14px;">
-          <p style="margin-bottom:6px;"><strong>Developer:</strong> Yash Rayjada (YBR Digital)</p>
-          <p style="margin-bottom:6px;"><strong>Application:</strong> MobCam - OBS Camera</p>
-          <p style="margin-bottom:6px;"><strong>Support &amp; Legal Email:</strong> <a href="mailto:info@ybrdigital.in" style="color:var(--accent-green); text-decoration:none; font-weight:600;">info@ybrdigital.in</a></p>
-          <p style="margin-bottom:0;"><strong>Official Website:</strong> <a href="https://www.ybrdigital.in" target="_blank" style="color:var(--accent-cyan); text-decoration:none; font-weight:600;">www.ybrdigital.in</a></p>
-        </div>
-      </section>
-
-    </main>
+  <h1>Privacy Policy</h1>
+  
+  <div class="meta-box">
+    <p><strong>Application:</strong> MobCam - OBS Camera</p>
+    <p><strong>Desktop Software:</strong> MobCam OBS Studio Plugin (Windows 64-bit)</p>
+    <p><strong>Developer:</strong> Yash Rayjada (YBR Digital)</p>
+    <p><strong>Website:</strong> <a href="https://www.ybrdigital.in" target="_blank">www.ybrdigital.in</a></p>
+    <p><strong>Support &amp; Privacy Contact:</strong> <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a></p>
+    <p><strong>Effective Date:</strong> September 25, 2026</p>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;">
-      <div>&copy; 2026 <strong>MobCam - OBS Camera</strong>. Developed by Yash Rayjada. All rights reserved.</div>
-      <div>
-        <a href="terms-of-service.html">Terms of Service</a> &bull;
-        <a href="https://www.ybrdigital.in" target="_blank">YBR Digital</a> &bull;
-        <a href="mailto:info@ybrdigital.in">Support</a>
-      </div>
-    </div>
-  </footer>
+  <div class="highlight-box">
+    <strong>Core Privacy Commitment:</strong> MobCam operates on a 100% peer-to-peer (P2P) local streaming architecture. Your live video and audio streams are processed and transmitted strictly over your private local Wi-Fi or USB connection directly to OBS Studio on your personal computer. We do not operate cloud relay servers, and we never record, store, or transmit your camera video or microphone audio over the internet.
+  </div>
+
+  <h2>1. Introduction &amp; Scope</h2>
+  <p>
+    This Privacy Policy outlines how <strong>Yash Rayjada</strong> ("Developer", "we", "us", or "our"), trading as <strong>YBR Digital</strong>, handles information in connection with your use of the <strong>MobCam - OBS Camera</strong> mobile application on Android and the companion <strong>MobCam OBS Studio Plugin</strong> on Windows.
+  </p>
+  <p>
+    We believe in radical data minimization. Our products are designed to deliver ultra-low latency, broadcast-quality video directly to your workstation without collecting, harvesting, or monetizing your personal data.
+  </p>
+
+  <h2>2. Zero Cloud Video/Audio Streaming Architecture</h2>
+  <p>
+    MobCam is strictly a local client-server pipeline:
+  </p>
+  <ul>
+    <li><strong>Direct Local Transmission:</strong> Your phone hardware encodes camera video into H.264 video frames and microphone audio into AAC audio packets. These packets are transmitted directly across your local network (LAN) via TCP port <code>4747</code> to OBS Studio.</li>
+    <li><strong>No Cloud Intermediaries:</strong> No video frames, photographs, or audio samples ever touch external servers, content delivery networks (CDNs), or third-party cloud storage.</li>
+    <li><strong>USB Wired Mode:</strong> When connecting via USB (using Android ADB port forwarding), media data travels entirely through your physical USB cable with zero radio broadcast.</li>
+  </ul>
+
+  <h2>3. Android Application Permissions</h2>
+  <p>
+    To operate as a live webcam feed for OBS Studio, the Android application requests the following device permissions:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Permission</th>
+        <th style="width: 20%;">Type</th>
+        <th>Purpose &amp; Functional Justification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>android.permission.CAMERA</code></td>
+        <td>Dangerous / Runtime</td>
+        <td>Capturing the live camera feed, controlling hardware zoom, toggling device torch/flashlight, setting manual exposure compensation (EV), and configuring white balance.</td>
+      </tr>
+      <tr>
+        <td><code>android.permission.RECORD_AUDIO</code></td>
+        <td>Dangerous / Runtime</td>
+        <td>Capturing microphone audio (48kHz AAC) when phone audio streaming is enabled by the user. Audio is streamed in real time and is never recorded or saved to storage.</td>
+      </tr>
+      <tr>
+        <td><code>android.permission.INTERNET</code></td>
+        <td>Normal</td>
+        <td>Opening local TCP network sockets to deliver the video stream to OBS Studio on your PC, and communicating with Google Play Billing / RevenueCat for subscription validation.</td>
+      </tr>
+      <tr>
+        <td><code>android.permission.ACCESS_NETWORK_STATE</code><br><code>android.permission.ACCESS_WIFI_STATE</code></td>
+        <td>Normal</td>
+        <td>Detecting local Wi-Fi connectivity, identifying the local IP address for socket binding, and listening for OBS Studio UDP discovery broadcasts.</td>
+      </tr>
+      <tr>
+        <td><code>android.permission.FOREGROUND_SERVICE</code><br><code>android.permission.FOREGROUND_SERVICE_CAMERA</code><br><code>android.permission.FOREGROUND_SERVICE_MICROPHONE</code></td>
+        <td>Special / Service</td>
+        <td>Ensuring the video and audio streaming service remains continuously active when the smartphone screen is locked, dimmed, or when navigating between apps during a broadcast.</td>
+      </tr>
+      <tr>
+        <td><code>android.permission.POST_NOTIFICATIONS</code></td>
+        <td>Runtime (API 33+)</td>
+        <td>Displaying the persistent foreground notification required by Android to inform the user that camera and microphone streaming is active.</td>
+      </tr>
+      <tr>
+        <td><code>android.permission.WAKE_LOCK</code></td>
+        <td>Normal</td>
+        <td>Preventing the device CPU from entering sleep mode during active live broadcast sessions.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Information We Collect, Store &amp; Process</h2>
+
+  <h3>A. Information Stored Locally on Your Smartphone</h3>
+  <p>
+    The app stores user configuration preferences locally in Android <code>SharedPreferences</code>. This data never leaves your device and includes:
+  </p>
+  <ul>
+    <li>Resolution preferences (e.g., 1080p, 4K, 720p).</li>
+    <li>Target framerate (30 FPS or 60 FPS).</li>
+    <li>Bitrate settings (8,000 kbps to 35,000 kbps).</li>
+    <li>Latency mode (Ultra-Low Latency vs. Balanced).</li>
+    <li>Audio transmission toggle (Enabled / Disabled).</li>
+    <li>Studio camera preferences (Torch status, Exposure value, White balance mode).</li>
+  </ul>
+
+  <h3>B. Information We DO NOT Collect</h3>
+  <ul>
+    <li><strong>No User Accounts:</strong> No sign-up, registration, email address, username, or password required.</li>
+    <li><strong>No Personal Identifiers:</strong> We do not collect names, addresses, phone numbers, contacts, or calendar entries.</li>
+    <li><strong>No Location Tracking:</strong> We do not access GPS, cellular location, or geographic coordinates.</li>
+    <li><strong>No Media Files:</strong> We do not scan, access, read, or upload device photos, gallery albums, or personal files.</li>
+    <li><strong>No Biometric or Facial Recognition:</strong> Camera pixels are encoded directly as raw YUV/RGB frames without facial recognition or biometric profiling.</li>
+  </ul>
+
+  <h2>5. Windows OBS Plugin &amp; Installer Details</h2>
+  <p>
+    The companion <strong>MobCam OBS Studio Plugin</strong> runs as a native 64-bit DLL inside OBS Studio on Windows:
+  </p>
+  <ul>
+    <li><strong>Local Web Control Server:</strong> The plugin hosts an embedded lightweight HTTP server strictly on <code>http://localhost:4752/</code> (IPv4 loopback address <code>127.0.0.1</code>). It is completely blocked from the outside internet and only serves the OBS Quick Controls dock on your local PC.</li>
+    <li><strong>Zero Telemetry:</strong> The desktop plugin contains zero tracking scripts, analytics libraries, or outbound external internet connections.</li>
+    <li><strong>Windows Installer:</strong> The setup installer (<code>MobCam-OBS-Plugin-v1.0.0-Setup.exe</code>) places plugin binaries in <code>%ProgramData%\obs-studio\plugins\mobcam\</code> and automatically registers the browser dock in your local OBS configuration file (<code>%APPDATA%\obs-studio\user.ini</code>). It collects no personal information.</li>
+  </ul>
+
+  <h2>6. In-App Subscriptions &amp; Financial Information</h2>
+  <p>
+    MobCam offers an optional paid upgrade called <strong>MobCam Pro</strong>, which unlocks watermark-free streaming, 4K UHD resolution, 60 FPS, ultra-low latency, and the Studio Camera Suite.
+  </p>
+  <div class="warning-box">
+    <strong>Payment Security Notice:</strong> All purchases and subscriptions are handled exclusively by <strong>Google Play In-App Billing</strong>. The developer does not receive, view, process, or store credit card numbers, banking details, or billing addresses.
+  </div>
+  <p>
+    To verify subscription status and maintain your Pro entitlement across app updates, we integrate <strong>RevenueCat Inc.</strong> (a subscription infrastructure platform). RevenueCat processes:
+  </p>
+  <ul>
+    <li>An anonymous, randomly generated App User ID.</li>
+    <li>Google Play order transaction receipts and product SKU identifiers.</li>
+    <li>Purchase timestamps and subscription expiration dates.</li>
+  </ul>
+  <p>
+    For more details, review the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.
+  </p>
+
+  <h2>7. Diagnostic &amp; Crash Reports</h2>
+  <p>
+    To diagnose and resolve application crashes across different Android devices, MobCam integrates <strong>Google Firebase Crashlytics</strong> (provided by Google LLC).
+  </p>
+  <p>
+    When an unexpected error or crash occurs, anonymized diagnostic data is sent to Firebase, including:
+  </p>
+  <ul>
+    <li>Crash stack trace and code exception logs.</li>
+    <li>Device model name, manufacturer, and CPU architecture.</li>
+    <li>Android operating system version and free RAM/storage state.</li>
+  </ul>
+  <p>
+    This diagnostic information contains no camera video, audio recordings, or personal identifiers. For more details, consult the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+  </p>
+
+  <h2>8. Data Retention &amp; User Deletion Rights</h2>
+  <p>
+    Because MobCam does not maintain external cloud databases of user accounts:
+  </p>
+  <ul>
+    <li><strong>Local Data Deletion:</strong> You can completely erase all locally stored settings at any time by clearing the application's storage in your phone settings (<em>Settings &rarr; Apps &rarr; MobCam &rarr; Storage &rarr; Clear Data</em>) or by uninstalling the application.</li>
+    <li><strong>Subscription Cancellation:</strong> Subscriptions can be managed or cancelled at any time through your Google Play Store account (<em>Google Play Store &rarr; Profile &rarr; Payments &amp; Subscriptions &rarr; Subscriptions</em>).</li>
+  </ul>
+
+  <h2>9. Children's Privacy (COPPA Compliance)</h2>
+  <p>
+    MobCam is intended for general audiences, content creators, and broadcast professionals. We do not knowingly collect, solicit, or maintain personal information from children under the age of 13 (or under 16 in the European Union). If you believe a minor has provided us with personal information, please contact us immediately at <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a>.
+  </p>
+
+  <h2>10. GDPR &amp; CCPA/CPRA Statutory Rights</h2>
+  <p>
+    Under international privacy frameworks (including the European General Data Protection Regulation and California Consumer Privacy Act):
+  </p>
+  <ul>
+    <li><strong>Right to Know:</strong> You have the right to request disclosure of what personal data is processed.</li>
+    <li><strong>Right to Deletion:</strong> You have the right to request deletion of personal information. (As stated, MobCam stores zero personal information on remote servers).</li>
+    <li><strong>No Sale or Sharing:</strong> We do not sell, rent, or share personal data with third-party advertisers or data brokers.</li>
+    <li><strong>Right to Non-Discrimination:</strong> We will never deny services or charge differing rates for exercising your privacy rights.</li>
+  </ul>
+
+  <h2>11. Updates to This Privacy Policy</h2>
+  <p>
+    We may periodically update this Privacy Policy to reflect application improvements, new features, or evolving regulatory standards. Any modifications will be posted to this page with an updated "Effective Date".
+  </p>
+
+  <h2>12. Contact &amp; Legal Notices</h2>
+  <p>
+    If you have any questions, concerns, or requests regarding this Privacy Policy, please contact:
+  </p>
+  <div class="meta-box">
+    <p><strong>Developer:</strong> Yash Rayjada (YBR Digital)</p>
+    <p><strong>Application:</strong> MobCam - OBS Camera</p>
+    <p><strong>Email:</strong> <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a></p>
+    <p><strong>Website:</strong> <a href="https://www.ybrdigital.in" target="_blank">www.ybrdigital.in</a></p>
+  </div>
 
 </body>
 </html>
