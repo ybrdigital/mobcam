@@ -38,7 +38,7 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 
 | Artifact | File | Size | Checksum (SHA-256) |
 |---|---|---|---|
-| **Windows OBS Plugin Setup** | [MobCam-OBS-Plugin-v1.0.0-Setup.exe](assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe) | 2.1 MB | `19501575BAE2017A5F1E6FBACAE27838ADD7AAA55A66EFF548BA09D22545449D` |
+| **Windows OBS Plugin Setup** | [MobCam-OBS-Plugin-v1.0.0-Setup.exe](assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe) | 2.1 MB | `CE26767D697DFFAE7F4353533999642C3503D944D39D396E50EC6D3F32E1DAE1` |
 | **Android Application** | [Install on Google Play](https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam) | — | Official Google Play Store Release |
 
 > *Note: The MobCam Android mobile application is distributed exclusively through the Google Play Store.*
