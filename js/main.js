@@ -17,7 +17,7 @@ const PLUGIN_RELEASES = [
     windowsCompatibility: "Windows 10 / 11 (64-bit)",
     installerPath: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
     installerSize: "2.1 MB",
-    sha256: "19501575BAE2017A5F1E6FBACAE27838ADD7AAA55A66EFF548BA09D22545449D",
+    sha256: "A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB",
     changelog: [
       "Production-ready Windows 64-bit installer for OBS Studio 28.0 - 31.0+.",
       "Ultra-low latency streaming engine supporting both high-speed Wi-Fi and USB.",
