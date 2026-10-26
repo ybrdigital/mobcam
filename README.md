@@ -24,7 +24,7 @@ Visit the production website: **[https://ybrdigital.github.io/mobcam/](https://y
 ## 🚀 Key Highlights
 
 - **Ultra-Low Latency Mode**: Optimized real-time streaming engine engineered for both 5 GHz Wi-Fi and wired USB tethering with zero jitter.
-- **In-OBS Quick Controls Dock**: Integrated browser dock (`http://localhost:4752/`) inside OBS Studio (`Docks > MobCam Controls`) to toggle flash, zoom presets (1x, 1.5x, 2x), autofocus modes, and exposure compensation remotely.
+- **In-OBS Studio Quick Controls Dock**: Integrated browser dock (`http://localhost:4752/`) inside OBS Studio (`Docks > MobCam Controls`) to toggle flash, zoom presets (1x, 1.5x, 2x), autofocus modes, and exposure compensation remotely.
 - **Auto 16:9 Landscape Lock**: Automatically locks your video orientation into horizontal widescreen when streaming starts, preventing black vertical pillarboxes.
 - **Studio Quality**: Supports 1080p and 4K UHD at up to 60 FPS with hardware-accelerated AVC/H.264, HEVC/H.265, and MJPEG encoding.
 - **Synchronized 48 kHz Audio**: Crystal-clear microphone capture with timestamp audio synchronization directly into the OBS Audio Mixer.
