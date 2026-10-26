@@ -1,5 +1,5 @@
 /**
- * MobCam - OBS Camera | Official Production Web Engine
+ * MobCam - OBS Studio Camera | Official Production Web Engine
  * Developed by Yash Rayjada | info@ybrdigital.in
  * Repository: https://github.com/ybrdigital/mobcam
  */

@@ -1,4 +1,4 @@
-# MobCam - OBS Camera
+# MobCam - OBS Studio Camera
 
 <div align="center">
   <img src="assets/img/logo.png" alt="MobCam Logo" width="120" height="120" style="border-radius: 24px; box-shadow: 0 4px 20px rgba(0, 230, 118, 0.4);">
