@@ -5,7 +5,7 @@
  */
 
 // ============================================================================
-// 1. OBS Plugin Releases Catalog (Version Management Architecture)
+// 1. MobCam OBS Studio Plugin Releases Catalog (Version Management Architecture)
 // ============================================================================
 const PLUGIN_RELEASES = [
   {
