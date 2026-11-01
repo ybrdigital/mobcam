@@ -145,9 +145,9 @@ For full architecture and protocol details, see [docs/development.md](docs/devel
 
 ---
 
-## 🤝 Contributing
+## 🛡️ Project Maintenance Policy
 
-Contributions, bug reports, and suggestions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before submitting pull requests or vulnerability reports.
+MobCam OBS Studio Plugin is developed and maintained exclusively by **YBR Digital**. We currently do not accept external pull requests or collaborative code development. Bug reports, compatibility issues, and feature suggestions are welcome via [GitHub Issues](https://github.com/ybrdigital/mobcam/issues). For full details on forking and maintenance, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
