@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - MobCam - OBS Studio Camera</title>
+  <title>Privacy Policy - MobCam - Native Camera Plugin for OBS Studio</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -114,34 +114,41 @@
   <h1>Privacy Policy</h1>
   
   <div class="meta-box">
-    <p><strong>Application:</strong> MobCam - OBS Studio Camera</p>
-    <p><strong>Desktop Software:</strong> MobCam OBS Studio Plugin (Windows 64-bit)</p>
-    <p><strong>Developer:</strong> Yash Rayjada (YBR Digital)</p>
-    <p><strong>Website:</strong> <a href="https://www.ybrdigital.in" target="_blank">www.ybrdigital.in</a></p>
+    <p><strong>Mobile Application:</strong> MobCam Android App (Proprietary, distributed via Google Play)</p>
+    <p><strong>Desktop Plugin:</strong> MobCam Camera Plugin for OBS Studio (GPL-2.0-or-later Open Source)</p>
+    <p><strong>Developer / Maintainer:</strong> Yash Rayjada (YBR Digital)</p>
+    <p><strong>Official Website:</strong> <a href="https://ybrdigital.github.io/mobcam/" target="_blank">https://ybrdigital.github.io/mobcam/</a></p>
     <p><strong>Support &amp; Privacy Contact:</strong> <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a></p>
-    <p><strong>Effective Date:</strong> September 25, 2026</p>
+    <p><strong>Effective Date:</strong> September 25, 2026 (Updated November 2026)</p>
   </div>
 
   <div class="highlight-box">
-    <strong>Core Privacy Commitment:</strong> MobCam operates on a 100% peer-to-peer (P2P) local streaming architecture. Your live video and audio streams are processed and transmitted strictly over your private local Wi-Fi or USB connection directly to OBS Studio on your personal computer. We do not operate cloud relay servers, and we never record, store, or transmit your camera video or microphone audio over the internet.
+    <strong>Core Privacy Commitment:</strong> MobCam operates on a pure peer-to-peer (P2P) local streaming architecture. Your live video and audio streams are processed and transmitted strictly over your private local Wi-Fi network or direct USB cable to OBS Studio on your personal computer. We operate zero cloud relay servers, and we never record, store, or transmit your camera video or microphone audio over the internet.
   </div>
 
   <h2>1. Introduction &amp; Scope</h2>
   <p>
-    This Privacy Policy outlines how <strong>Yash Rayjada</strong> ("Developer", "we", "us", or "our"), trading as <strong>YBR Digital</strong>, handles information in connection with your use of the <strong>MobCam - OBS Studio Camera</strong> mobile application on Android and the companion <strong>MobCam OBS Studio Plugin</strong> on Windows.
+    This Privacy Policy outlines how <strong>Yash Rayjada</strong> ("Developer", "we", "us", or "our"), trading as <strong>YBR Digital</strong>, handles information in connection with your use of the <strong>MobCam</strong> Android application and the companion open-source <strong>MobCam Camera Plugin for OBS Studio</strong> on Windows.
   </p>
   <p>
-    We believe in radical data minimization. Our products are designed to deliver ultra-low latency, broadcast-quality video directly to your workstation without collecting, harvesting, or monetizing your personal data.
+    We believe in radical data minimization. Our products are engineered to deliver ultra-low latency, broadcast-quality video directly to your workstation without collecting, harvesting, or monetizing your personal data.
   </p>
 
-  <h2>2. Zero Cloud Video/Audio Streaming Architecture</h2>
+  <h2>2. Pure Local Peer-to-Peer Streaming Architecture</h2>
   <p>
-    MobCam is strictly a local client-server pipeline:
+    MobCam is strictly a local client-server pipeline operating within your private local network (LAN) or over a physical USB connection:
   </p>
   <ul>
-    <li><strong>Direct Local Transmission:</strong> Your phone hardware encodes camera video into H.264 video frames and microphone audio into AAC audio packets. These packets are transmitted directly across your local network (LAN) via TCP port <code>4747</code> to OBS Studio.</li>
-    <li><strong>No Cloud Intermediaries:</strong> No video frames, photographs, or audio samples ever touch external servers, content delivery networks (CDNs), or third-party cloud storage.</li>
-    <li><strong>USB Wired Mode:</strong> When connecting via USB (using standard Android USB tethering), media data travels entirely through your physical USB cable with zero radio broadcast.</li>
+    <li><strong>Direct Local Transmission:</strong> Your phone hardware encodes camera video into H.264/HEVC video frames and microphone audio into AAC audio packets. These packets are transmitted directly across your local network (LAN) or USB tethering connection:
+      <ul>
+        <li><strong>UDP Port 4750 (Inbound on PC):</strong> Device discovery beacon sent by the Android app across the local subnet to detect available devices.</li>
+        <li><strong>TCP Port 4747 (Outbound to Phone):</strong> Control and handshake connection for remote camera settings (zoom, focus, exposure, torch).</li>
+        <li><strong>TCP Port 4748 (Outbound to Phone):</strong> Dedicated raw video media stream socket.</li>
+        <li><strong>TCP Port 4749 (Outbound to Phone):</strong> Dedicated raw audio media stream socket.</li>
+      </ul>
+    </li>
+    <li><strong>No Cloud Relay or Intermediate Servers:</strong> Video frames and audio samples are never transmitted across the public internet, content delivery networks (CDNs), or third-party cloud storage.</li>
+    <li><strong>USB Wired Mode:</strong> When connecting via USB (using standard Android USB tethering), all network packets travel exclusively across the physical USB bus (via local virtual network adapter) with zero radio exposure.</li>
   </ul>
 
   <h2>3. Android Application Permissions</h2>
@@ -222,12 +229,13 @@
 
   <h2>5. Windows OBS Plugin &amp; Installer Details</h2>
   <p>
-    The companion <strong>MobCam OBS Studio Plugin</strong> runs as a native 64-bit DLL inside OBS Studio on Windows:
+    The companion <strong>MobCam Camera Plugin for OBS Studio</strong> is free and open-source software (licensed under GPL-2.0-or-later) that runs as a native 64-bit DLL inside OBS Studio on Windows:
   </p>
   <ul>
     <li><strong>Local Web Control Server:</strong> The plugin hosts an embedded lightweight HTTP server strictly on <code>http://localhost:4752/</code> (IPv4 loopback address <code>127.0.0.1</code>). It is completely blocked from the outside internet and only serves the OBS Quick Controls dock on your local PC.</li>
-    <li><strong>Zero Telemetry:</strong> The desktop plugin contains zero tracking scripts, analytics libraries, or outbound external internet connections.</li>
-    <li><strong>Windows Installer:</strong> The setup installer (<code>MobCam-OBS-Plugin-v1.0.0-Setup.exe</code>) places plugin binaries in <code>%ProgramData%\obs-studio\plugins\mobcam\</code> and automatically registers the browser dock in your local OBS configuration file (<code>%APPDATA%\obs-studio\user.ini</code>). It collects no personal information.</li>
+    <li><strong>Zero Telemetry:</strong> The desktop plugin contains zero tracking scripts, analytics libraries, advertising SDKs, or external internet connections.</li>
+    <li><strong>Windows Installer:</strong> The setup installer (<code>MobCam-OBS-Plugin-v1.0.0-Setup.exe</code>) places plugin binaries in <code>%ProgramData%\obs-studio\plugins\mobcam\</code> and registers the browser dock in your local OBS configuration file (<code>%APPDATA%\obs-studio\user.ini</code>). It collects no personal information.</li>
+    <li><strong>Open Source Auditability:</strong> The full native source code of the Windows plugin is publicly hosted and verifiable at <a href="https://github.com/ybrdigital/mobcam" target="_blank">https://github.com/ybrdigital/mobcam</a>.</li>
   </ul>
 
   <h2>6. In-App Subscriptions &amp; Financial Information</h2>
@@ -300,10 +308,14 @@
     If you have any questions, concerns, or requests regarding this Privacy Policy, please contact:
   </p>
   <div class="meta-box">
-    <p><strong>Developer:</strong> Yash Rayjada (YBR Digital)</p>
-    <p><strong>Application:</strong> MobCam - OBS Studio Camera</p>
-    <p><strong>Email:</strong> <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a></p>
-    <p><strong>Website:</strong> <a href="https://www.ybrdigital.in" target="_blank">www.ybrdigital.in</a></p>
+    <p><strong>Developer / Maintainer:</strong> Yash Rayjada (YBR Digital)</p>
+    <p><strong>Product:</strong> MobCam (Android App &amp; OBS Studio Plugin)</p>
+    <p><strong>Support &amp; Privacy Contact:</strong> <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a></p>
+    <p><strong>Official Website:</strong> <a href="https://ybrdigital.github.io/mobcam/" target="_blank">https://ybrdigital.github.io/mobcam/</a></p>
+    <p><strong>GitHub Repository:</strong> <a href="https://github.com/ybrdigital/mobcam" target="_blank">https://github.com/ybrdigital/mobcam</a></p>
+    <p style="font-size: 12px; color: #777; margin-top: 10px; border-top: 1px solid #e0e0e0; padding-top: 8px;">
+      OBS&reg; and OBS Studio&reg; are registered trademarks of Wizards of OBS LLC. MobCam is an independent open-source project and is not affiliated with, sponsored by, or endorsed by the OBS Project or Wizards of OBS LLC.
+    </p>
   </div>
 
 </body>

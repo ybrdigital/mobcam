@@ -1,10 +1,10 @@
 ; Inno Setup Script for MobCam OBS Studio Plugin
 ; Compatible with Inno Setup 6.x
 
-#define MyAppName "MobCam OBS Studio Plugin"
+#define MyAppName "MobCam Camera Plugin for OBS Studio"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "YBR Digital"
-#define MyAppURL "https://github.com/ybrdigital/mobcam"
+#define MyAppURL "https://ybrdigital.github.io/mobcam/"
 #define MyAppExeName "MobCam-OBS-Plugin-v1.0.0-Setup.exe"
 
 [Setup]
@@ -15,6 +15,8 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
+AppComments=Native Windows camera plugin connecting MobCam Android to OBS Studio over Wi-Fi and USB.
+AppContact=info@ybrdigital.in
 DefaultDirName={commonappdata}\obs-studio\plugins\mobcam
 DisableDirPage=yes
 DisableProgramGroupPage=yes
@@ -28,11 +30,22 @@ WizardStyle=modern
 SetupIconFile=mobcam.ico
 UninstallDisplayIcon={app}\mobcam.ico
 CreateUninstallRegKey=yes
+LicenseFile=..\..\LICENSE
+VersionInfoVersion=1.0.0.0
+VersionInfoCompany=YBR Digital
+VersionInfoDescription=MobCam OBS Studio Plugin Setup
+VersionInfoProductName=MobCam
+VersionInfoCopyright=Copyright (C) 2026 YBR Digital
+
+[Messages]
+BeveledLabel=MobCam is an independent open-source plugin compatible with OBS Studio.
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
+Source: "..\..\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\THIRD_PARTY_LICENSES.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "mobcam.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\build\bin\Release\mobcam.dll"; DestDir: "{app}\bin\64bit"; Flags: ignoreversion restartreplace
 Source: "..\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs

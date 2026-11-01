@@ -35,3 +35,9 @@ If you discover a security vulnerability in the MobCam OBS Studio Plugin, public
 - We will acknowledge receipt of your vulnerability report within **48 hours**.
 - We will work diligently to confirm, mitigate, and issue a patched release.
 - We request that you follow coordinated disclosure practices and refrain from publicly discussing or exploiting the vulnerability until a fix has been officially released.
+
+---
+
+## Trademarks
+
+OBS® and OBS Studio® are registered trademarks of Wizards of OBS LLC. MobCam is an independent open-source project and is not affiliated with, sponsored by, or endorsed by the OBS Project or Wizards of OBS LLC.

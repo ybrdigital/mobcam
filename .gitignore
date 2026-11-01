@@ -4,6 +4,7 @@ bin/
 obj/
 x64/
 x86/
+release/
 [Dd]ebug/
 plugin/build/
 plugin/bin/

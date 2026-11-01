@@ -1,58 +1,62 @@
-# MobCam OBS Plugin – Project Maintenance Policy
+# MobCam - Project Maintenance Policy & Contributing Guidelines
 
-## Project Ownership and Maintenance
+## 1. Project Ownership and Maintenance
 
-MobCam OBS Studio Plugin is developed, maintained, and officially released by **YBR Digital**.
+The **MobCam Camera Plugin for OBS Studio** is designed, developed, and maintained independently by **Yash Rayjada (YBR Digital)**.
 
-This is an independently maintained open-source project.
-
-The official source code is publicly available under the **GNU General Public License v2.0 or later (GPL-2.0-or-later)**.
+This is a personal open-source project managed by a solo developer. The native C source code of the Windows plugin is published openly under the **GNU General Public License v2.0 or later (GPL-2.0-or-later)**.
 
 ---
 
-## Development and Contributions
+## 2. External Contributions & Pull Requests
 
-The official MobCam OBS Plugin is maintained exclusively by YBR Digital.
+Official development of the MobCam plugin is handled exclusively by the project maintainer.
 
-We currently do not accept external code contributions, pull requests, or collaborative development.
-
-All official development, code modifications, bug fixes, feature implementations, and releases are managed directly by the project maintainer.
+- **Pull Requests**: We currently do not accept external pull requests, code contributions, or collaborative development. Any submitted pull requests may be closed without review.
+- **Why this policy exists**: As an independent solo maintainer, reviewing external code, verifying third-party licensing compatibility, and maintaining ongoing code divergence across external patches creates significant overhead. Keeping development internal ensures consistent architecture and rapid iteration.
 
 ---
 
-## Bug Reports and Feedback
+## 3. Bug Reports & Feature Requests
 
-Users are welcome to report bugs, compatibility problems, and feature suggestions through [GitHub Issues](https://github.com/ybrdigital/mobcam/issues).
+Users and streamers are welcome to submit bug reports, compatibility feedback, and feature suggestions through [GitHub Issues](https://github.com/ybrdigital/mobcam/issues).
 
-When submitting an issue, please include:
-- Windows OS build and OBS Studio version.
-- MobCam Android app version and device model.
+To help diagnose problems effectively, please include:
+- Windows build (e.g., Windows 11 23H2 x64) and OBS Studio version (e.g., 30.2.3).
+- Android device model and Android OS version.
 - Connection type (5 GHz Wi-Fi or USB tethering).
-- Relevant OBS log output (`Help > Log Files > View Current Log`).
+- Full OBS log file (`Help > Log Files > View Current Log`).
 
-*Note: Submitting feedback does not guarantee that a requested feature or change will be implemented.*
-
----
-
-## Forking and Modifications
-
-Because this project is distributed under **GPL-2.0-or-later**, developers are free to study, modify, and redistribute the source code under the applicable GPL terms.
-
-Independent forks and modified versions are not official MobCam releases unless explicitly approved by YBR Digital.
+*Note: Submitting an issue or feature suggestion does not guarantee that it will be implemented.*
 
 ---
 
-## Official Releases
+## 4. Forking & GPL Rights
 
-Only releases published through the official YBR Digital MobCam GitHub repository and website should be considered official MobCam releases:
+Under the terms of the **GPL-2.0-or-later**, anyone is legally entitled to inspect, fork, modify, and redistribute the plugin source code in accordance with the license.
 
-- **Official Website**: [https://ybrdigital.github.io/mobcam/](https://ybrdigital.github.io/mobcam/)
-- **Official Source Code**: [https://github.com/ybrdigital/mobcam](https://github.com/ybrdigital/mobcam)
+- **Independent Forks**: If you choose to fork or modify the software under the GPL, your fork represents an independent derivative work and is not an official MobCam release.
+- **Trademarks & Attribution**: The "MobCam" name, logo artwork, and brand assets are proprietary trademarks of YBR Digital. Forks or derivative distributions must not use official MobCam branding or imply endorsement, sponsorship, or association with YBR Digital.
+- **Technical Note on GitHub Forks**: While public GitHub repositories inherently allow users to create forks via the GitHub platform, only builds published from the official upstream repository are recognized as authentic MobCam releases.
 
 ---
 
-## Contact
+## 5. Official Releases
 
-For bug reports, support, and general inquiries, please use the [GitHub Issues](https://github.com/ybrdigital/mobcam/issues) section or official MobCam support channels:
-- Support Email: [info@ybrdigital.in](mailto:info@ybrdigital.in)
-- Developer/Brand: YBR Digital ([www.ybrdigital.in](https://www.ybrdigital.in))
+Official plugin releases, installers, and verified SHA-256 checksums are published exclusively through:
+- **Official GitHub Releases**: [https://github.com/ybrdigital/mobcam/releases](https://github.com/ybrdigital/mobcam/releases)
+- **Official Documentation Website**: [https://ybrdigital.github.io/mobcam/](https://ybrdigital.github.io/mobcam/)
+
+---
+
+## 6. Support & Inquiries
+
+- **Bug Reports & Issues**: [https://github.com/ybrdigital/mobcam/issues](https://github.com/ybrdigital/mobcam/issues)
+- **Technical Support Email**: [info@ybrdigital.in](mailto:info@ybrdigital.in)
+- **Developer Website**: [https://www.ybrdigital.in](https://www.ybrdigital.in)
+
+---
+
+## 7. Trademarks
+
+OBS® and OBS Studio® are registered trademarks of Wizards of OBS LLC. MobCam is an independent open-source project and is not affiliated with, sponsored by, or endorsed by the OBS Project or Wizards of OBS LLC.

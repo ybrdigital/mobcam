@@ -1,3 +1,9 @@
+#
+# MobCam - Native Camera Plugin for OBS Studio
+# Copyright (C) 2026 Yash Rayjada (YBR Digital)
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+
 cmake_minimum_required(VERSION 3.22)
 project(mobcam VERSION 1.0.0 LANGUAGES C CXX)
 

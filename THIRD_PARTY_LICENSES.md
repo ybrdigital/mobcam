@@ -79,6 +79,24 @@ This document lists the third-party software, libraries, and components utilized
 
 ---
 
-## 3. Proprietary Notice: MobCam Android Application
+## 3. Source Code Availability & GPL Compliance
 
-The **MobCam Android Mobile Application** is a proprietary product of **YBR Digital** and is **not** licensed under the GPL-2.0-or-later. The Android application is distributed exclusively through the Google Play Store. MobCam operates on a pure local peer-to-peer architecture with no backend servers. This open-source repository strictly covers the **MobCam OBS Studio native plugin** and its public documentation.
+Under the terms of the **GNU General Public License v2.0 or later (GPL-2.0-or-later)**:
+- The complete, corresponding source code for all official distributed binaries of the MobCam Windows OBS Studio plugin is publicly available at:  
+  **[https://github.com/ybrdigital/mobcam](https://github.com/ybrdigital/mobcam)**
+- Users and developers have the right to inspect, modify, build, and redistribute the plugin source code and derivative works in accordance with the GPL-2.0-or-later.
+- Third-party runtime dependencies (`avcodec-62.dll`, `avutil-60.dll`, `obs.dll`) are provided dynamically by the user's local installation of OBS Studio.
+
+---
+
+## 4. Proprietary Notice: MobCam Android Application & Brand Assets
+
+- **Proprietary Android Application**: The **MobCam Android Mobile Application** is a proprietary commercial product of **YBR Digital** and is **not** licensed under the GPL. It is distributed through the Google Play Store. The plugin communicates with the Android app over an independently specified local network protocol; this communication across independent network sockets does not subject the proprietary mobile app to the GPL.
+- **Brand & Trademarks**: The name "MobCam", logo artwork, icons, website design, and documentation styling remain the exclusive proprietary assets and trademarks of YBR Digital and are not covered by the GPL.
+
+---
+
+## 5. Trademark Notices
+
+- **OBS Studio**: OBS® and OBS Studio® are registered trademarks of Wizards of OBS LLC. MobCam is an independent third-party open-source project and is not affiliated with, sponsored by, or endorsed by the OBS Project or Wizards of OBS LLC.
+- **Android & Google Play**: Android and Google Play are trademarks of Google LLC.

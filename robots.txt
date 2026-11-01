@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ybrdigital.github.io/mobcam/sitemap.xml
