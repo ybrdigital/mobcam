@@ -153,7 +153,6 @@ MobCam OBS Studio Plugin is developed and maintained exclusively by **YBR Digita
 
 ## 📬 Support & Contact
 
-- **Brand**: YBR Digital
 - **Developer**: Yash Rayjada
 - **Support Email**: [info@ybrdigital.in](mailto:info@ybrdigital.in)
 - **Official Website**: [https://www.ybrdigital.in](https://www.ybrdigital.in)
