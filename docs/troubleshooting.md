@@ -36,9 +36,9 @@ OBS displays a connecting message or black screen with timeout errors.
    - Both devices must be on the same local subnet (e.g., PC on `192.168.1.10`, Phone on `192.168.1.45`).
    - Many guest Wi-Fi networks and mesh routers enable **AP Isolation** (Client Isolation), which blocks device-to-device communication. Disable AP Isolation in your router settings or connect phone and PC to the primary Wi-Fi network.
 3. **Windows Defender Firewall**:
-   Windows Firewall may block incoming or outgoing socket connections. Add an inbound rule in Windows Defender Firewall for TCP port `4747` and UDP port `4748`.
-4. **PIN Mismatch**:
-   Verify the 6-digit PIN entered in OBS source properties matches the PIN displayed on the phone.
+   Windows Firewall may block incoming or outgoing socket connections. Add an inbound rule in Windows Defender Firewall for TCP port `4747` and UDP discovery port `4750`.
+4. **Manual IP Fallback**:
+   If auto-discovery is delayed by local network policies, choose **[Manual IP Entry]** in the OBS MobCam Source properties and enter the IP address shown on the phone screen.
 
 ---
 

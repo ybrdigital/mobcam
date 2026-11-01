@@ -55,7 +55,7 @@ The MobCam plugin operates as an in-process native DLL loaded into OBS Studio (`
 | `plugin/src/decode/h264_decoder.c` | Hardware/FFmpeg H.264 decoder converting byte streams into YUV420 frames. |
 | `plugin/src/decode/aac_decoder.c` | FFmpeg AAC audio decoder outputting synchronized 48 kHz PCM samples. |
 | `plugin/src/decode/watermark_overlay.c` | Real-time pixel overlay for watermarking. |
-| `plugin/src/ui/mobcam-properties.c` | OBS Properties panel (IP selection, port, PIN, latency mode). |
+| `plugin/src/ui/mobcam-properties.c` | OBS Properties panel (Device discovery selection, manual IP/port, stream telemetry displays). |
 | `plugin/src/ui/web_control_server.c` | Lightweight embedded HTTP server serving quick controls dock at port 4752. |
 | `plugin/src/cjson/` | Embedded cJSON parser for JSON control packets. |
 | `plugin/installer/setup.iss` | Inno Setup Windows installer compilation script. |
@@ -64,8 +64,8 @@ The MobCam plugin operates as an in-process native DLL loaded into OBS Studio (`
 
 ## 3. Communication Protocol
 
-### 3.1 UDP Auto-Discovery (Port 4748)
-The Android device periodically broadcasts a UDP JSON beacon containing:
+### 3.1 UDP Auto-Discovery (Port 4750)
+The Android device periodically broadcasts a UDP JSON beacon announcing device availability:
 ```json
 {
   "service": "mobcam",
@@ -76,16 +76,14 @@ The Android device periodically broadcasts a UDP JSON beacon containing:
   "httpPort": 4752
 }
 ```
-The plugin's discovery thread listens on `INADDR_ANY:4748`, parses the beacon, and populates the OBS source property dropdown.
+The plugin's discovery thread listens on UDP port `4750`, parses the beacon, and populates the OBS source property dropdown.
 
 ### 3.2 TCP Media Stream Framing (Port 4747)
-Upon connection, a 6-digit PIN authentication handshake is performed.
+The plugin establishes a direct low-latency TCP connection to the phone on port `4747`. Seamless streaming starts immediately with zero manual configuration.
 Each subsequent binary packet follows a compact header framing:
-- **Magic Prefix**: 4 bytes (`0x4D 0x4F 0x42 0x43` = `MOBC`)
-- **Packet Type**: 1 byte (`0x01` = H.264 Video, `0x02` = AAC Audio, `0x03` = Heartbeat)
-- **Payload Length**: 4 bytes (Big Endian `uint32_t`)
-- **Presentation Timestamp (PTS)**: 8 bytes (`uint64_t` nanoseconds)
-- **Payload**: Raw H.264 NAL units (SPS/PPS/IDR/P-frames) or raw ADTS AAC frame
+- **Frame Length**: 4 bytes (Big Endian `uint32_t`)
+- **Presentation Timestamp (PTS)**: 8 bytes (`int64_t` microseconds)
+- **Payload**: Raw H.264 NAL units (SPS/PPS/IDR/P-frames) or raw AAC audio frames
 
 ---
 

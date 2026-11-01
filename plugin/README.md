@@ -16,8 +16,8 @@ Native OBS Studio source plugin for **MobCam**, capturing hardware-accelerated H
 - **Integrated OBS Quick Controls**: Embedded HTTP dock on port `4752` (`Docks > MobCam Controls`) to manage zoom presets, flash, exposure, and focus directly inside OBS Studio.
 - **Auto 16:9 Landscape Lock**: Enforces horizontal widescreen framing to eliminate vertical black pillarboxes.
 - **Audio Output**: Exposes a dedicated synchronized audio track into the OBS Audio Mixer.
-- **UDP Auto-Discovery**: Automatic detection of active MobCam devices across the local subnet on port `4748`.
-- **PIN Mutual Authentication**: 6-digit PIN handshake before socket streaming begins.
+- **UDP Auto-Discovery**: Automatic detection of active MobCam devices across the local subnet.
+- **Zero-Configuration Instant Connect**: Seamless, one-click connection with automatic stream negotiation.
 
 ---
 

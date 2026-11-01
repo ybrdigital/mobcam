@@ -69,31 +69,23 @@ If you built `mobcam.dll` from source:
 ### Mode 1: USB Connection (Lowest Latency & Maximum Stability)
 
 1. Connect your Android phone to your PC using a high-quality USB-C cable.
-2. Enable **USB Tethering** in Android Settings (*Settings > Network & internet > Hotspot & tethering > USB tethering*) or use ADB port forwarding:
-   ```powershell
-   adb forward tcp:4747 tcp:4747
-   adb forward tcp:4752 tcp:4752
-   ```
+2. Enable **USB Tethering** in Android Settings (*Settings > Network & internet > Hotspot & tethering > USB tethering*).
 3. Open the **MobCam** app on your phone and tap **Start Stream**.
 4. In OBS Studio:
    - In the **Sources** dock, click **+** and select **MobCam Source**.
-   - Set **IP Address** to `127.0.0.1` (or select the tethered network adapter).
-   - Port is default `4747`.
-   - Enter your 6-digit **PIN** shown on the phone screen.
-   - Click **OK**.
+   - Keep **Select Camera Device** set to **[Auto-Detect (Seamless USB/Wi-Fi)]** or select your phone marked with `[USB Wired: ...]`.
+   - Click **OK** to immediately start streaming.
 
 ---
 
 ### Mode 2: Wireless Wi-Fi Connection
 
 1. Connect your Android phone and PC to the same Wi-Fi network (5 GHz Wi-Fi is strongly recommended for 1080p and 4K streaming).
-2. Open **MobCam** on your phone. The app will display your local IP (e.g., `192.168.1.45`) and port (`4747`).
-3. Tap **Start Stream**.
-4. In OBS Studio:
+2. Open **MobCam** on your phone and tap **Start Stream**.
+3. In OBS Studio:
    - Click **+** under **Sources** &rarr; **MobCam Source**.
-   - If auto-discovery is active, select your phone from the dropdown list, or type the IP address manually.
-   - Enter the 6-digit **PIN**.
-   - Click **OK**.
+   - With auto-discovery active, your phone will appear in the dropdown list automatically (or choose **Manual IP Entry** and enter the IP shown in the app).
+   - Click **OK** to begin streaming immediately.
 
 ---
 

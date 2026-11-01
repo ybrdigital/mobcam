@@ -30,7 +30,7 @@
 2. **Up to 60 FPS**: Silky-smooth high-framerate video capture for live streaming, esports, tutorials, and content creation.
 3. **Ultra-Low Latency Mode**: Optimized peer-to-peer transmission pipeline engineered for real-time responsiveness over Wi-Fi and wired USB.
 4. **Wireless Wi-Fi Streaming**: Wire-free freedom across 5 GHz local networks with automatic UDP device discovery on port `4748`.
-5. **USB Tethering & ADB Support**: Plug-and-play wired connectivity via USB tethering or ADB port forwarding for zero-jitter, packet-loss-free broadcasts.
+5. **USB Tethering Support**: Plug-and-play wired connectivity via standard Android USB tethering for zero-jitter, packet-loss-free broadcasts.
 6. **Integrated OBS Source**: Native `libobs` source module (`MobCam Source`) appearing directly in the OBS Studio Sources list.
 7. **Built-in Camera Controls**: Embedded OBS browser dock (`http://localhost:4752/` via `Docks > MobCam Controls`) to manage zoom presets, flash, exposure compensation, and autofocus remotely.
 8. **Synchronized 48 kHz Audio**: Crystal-clear mobile microphone capture mapped into the OBS Audio Mixer with timestamp sync.
@@ -106,8 +106,8 @@ mobcam/
 4. **Open OBS Studio**: Launch OBS Studio on your PC.
 5. **Add MobCam Source**: In the **Sources** dock, click **+** &rarr; **MobCam Source**.
 6. **Connect your Android Device**:
-   - **Via USB (Recommended)**: Connect USB cable, enable **USB Tethering** or run `adb forward tcp:4747 tcp:4747`, start stream in MobCam app, and connect to `127.0.0.1:4747`.
-   - **Via Wi-Fi**: Connect phone and PC to the same 5 GHz network, select your phone from auto-discovery or enter the IP shown on screen, enter your 6-digit PIN, and click OK.
+   - **Via USB (Lowest Latency)**: Connect USB cable, enable **USB Tethering** in phone settings, tap Start Stream in MobCam, and click OK in OBS Studio.
+   - **Via Wi-Fi**: Ensure phone and PC are on the same Wi-Fi network, start stream in MobCam, select your phone from auto-discovery (or enter the IP manually), and click OK.
 
 For complete setup instructions, see [docs/installation.md](docs/installation.md).  
 For troubleshooting common issues, see [docs/troubleshooting.md](docs/troubleshooting.md).

@@ -16,7 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Automatic Device Discovery**: UDP broadcast listener on port 4748 automatically detects active MobCam Android devices on the local subnet.
 - **In-OBS Studio Quick Controls Dock**: Embedded HTTP web dock (`http://localhost:4752/`) accessible via `Docks > MobCam Controls` to adjust zoom presets (1x, 1.5x, 2x), autofocus modes, flashlight, and exposure compensation directly from OBS Studio.
 - **Auto 16:9 Landscape Lock**: Prevents vertical pillarboxing by locking video feeds to horizontal aspect ratio.
-- **PIN Security Handshake**: 6-digit mutual authentication handshake between Android device and OBS plugin.
-- **USB Tethering & Wi-Fi Support**: Seamless connectivity over 5 GHz Wi-Fi or wired USB tethering / ADB reverse tunnels (`127.0.0.1:4747`).
+- **USB Tethering & Wi-Fi Support**: Seamless connectivity over 5 GHz Wi-Fi or wired Android USB tethering with zero manual setup.
 - **Inno Setup 6 Installer**: Automated Windows 64-bit installer with OBS Studio installation detection and process termination checks.
 - **Documentation & Website**: Production landing page on GitHub Pages with downloads, checksums, and technical specifications.
