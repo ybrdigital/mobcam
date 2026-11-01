@@ -81,4 +81,4 @@ This document lists the third-party software, libraries, and components utilized
 
 ## 3. Proprietary Notice: MobCam Android Application
 
-The **MobCam Android Mobile Application** and cloud backend services are proprietary products of **YBR Digital** and are **not** licensed under the GPL-2.0-or-later. The Android application is distributed exclusively through the Google Play Store. This open-source repository strictly covers the **MobCam OBS Studio native plugin** and its public documentation.
+The **MobCam Android Mobile Application** is a proprietary product of **YBR Digital** and is **not** licensed under the GPL-2.0-or-later. The Android application is distributed exclusively through the Google Play Store. MobCam operates on a pure local peer-to-peer architecture with no backend servers. This open-source repository strictly covers the **MobCam OBS Studio native plugin** and its public documentation.

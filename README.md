@@ -141,7 +141,7 @@ For full architecture and protocol details, see [docs/development.md](docs/devel
 
 - **OBS Studio Plugin**: Licensed under the **GNU General Public License v2.0 or later** ([GPL-2.0-or-later](LICENSE)).
 - **Third-Party Dependencies**: See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for audits of `libobs` (GPLv2+), FFmpeg (LGPLv2.1+/GPLv2+ dynamic linking), and `cJSON` (MIT).
-- **Android Mobile App & Backend**: The **MobCam Android Mobile App** distributed via Google Play and backend infrastructure remain proprietary products of YBR Digital and are not included in this open-source repository.
+- **Android Mobile App**: The **MobCam Android Mobile App** distributed via Google Play is a proprietary product of YBR Digital and is not included in this open-source repository. (MobCam uses direct local peer-to-peer transmission and requires no external backend servers).
 
 ---
 

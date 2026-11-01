@@ -16,7 +16,7 @@ This repository hosts:
 1. **The Native MobCam OBS Studio Plugin** (`plugin/`), written in C, built for OBS Studio 28.0 - 31.0+ on Windows (x64).
 2. **Official Documentation & Website** (`docs/`, `index.html`), hosted on GitHub Pages.
 
-> **Note**: The **MobCam Android Mobile Application** and backend services are proprietary products of YBR Digital and are maintained in private repositories. Please do not submit pull requests containing Android Java/Kotlin/Flutter code or backend files.
+> **Note**: The **MobCam Android Mobile Application** is a proprietary product of YBR Digital distributed via the Google Play Store and is maintained in a private repository (MobCam operates entirely peer-to-peer with no backend servers). Please do not submit pull requests containing Android Java/Kotlin/Flutter code.
 
 ---
 
