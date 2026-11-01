@@ -1,222 +1,209 @@
 /**
- * MobCam - OBS Studio Camera | Official Production Web Engine
- * Developed by Yash Rayjada | info@ybrdigital.in
+ * MobCam - OBS Studio Camera | Modern Web Engine
+ * Developer: Yash Rayjada (YBR Digital)
  * Repository: https://github.com/ybrdigital/mobcam
+ * License: GPL-2.0-or-later
  */
 
 // ============================================================================
-// 1. MobCam OBS Studio Plugin Releases Catalog (Version Management Architecture)
+// 1. Central Version Configuration & Fallback Definition
 // ============================================================================
-const PLUGIN_RELEASES = [
-  {
-    version: "1.0.0",
-    tag: "v1.0.0",
-    isLatest: true,
-    releaseDate: "September 2026",
-    obsCompatibility: "OBS Studio 28.0 - 31.0+ (64-bit)",
-    windowsCompatibility: "Windows 10 / 11 (64-bit)",
-    installerPath: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
-    installerSize: "2.1 MB",
-    sha256: "A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB",
-    changelog: [
-      "Production-ready Windows 64-bit installer for OBS Studio 28.0 - 31.0+.",
-      "Ultra-low latency streaming engine supporting both high-speed Wi-Fi and USB.",
-      "Hardware-accelerated YUV420 color rendering pipeline with zero chroma ghosting.",
-      "Integrated OBS Quick Controls web dock hosted natively on http://localhost:4752/.",
-      "Auto 16:9 landscape orientation lock prevents vertical pillarboxing.",
-      "Dynamic network reconnect: automatic IP recovery upon router handoffs.",
-      "Centered clean white watermark in OBS with pure transparency.",
-      "Isolated peer-to-peer TCP transmission without third-party cloud servers."
-    ]
-  }
-];
+const DEFAULT_VERSION_CONFIG = {
+  product: "MobCam OBS Studio Plugin",
+  version: "1.0.0",
+  tag: "v1.0.0",
+  releaseDate: "September 25, 2026",
+  windowsCompatibility: "Windows 10 / 11 (64-bit)",
+  obsCompatibility: "OBS Studio 28.0 - 31.0+ (64-bit)",
+  architecture: "x64",
+  installerFilename: "MobCam-OBS-Plugin-v1.0.0-Setup.exe",
+  installerPath: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
+  downloadUrl: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
+  githubReleaseUrl: "https://github.com/ybrdigital/mobcam/releases",
+  fileSize: "2.1 MB",
+  sha256: "A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB"
+};
+
+let activeVersionConfig = { ...DEFAULT_VERSION_CONFIG };
 
 // ============================================================================
 // 2. DOM Ready Initialization
 // ============================================================================
-$(document).ready(function () {
-  renderReleasesArchive();
+document.addEventListener("DOMContentLoaded", () => {
+  initVersionData();
   initCopyChecksum();
   initSmoothScroll();
-  initDownloadFeedback();
   initNavbarScroll();
+  initScreenshotLightbox();
   setDynamicYear();
 });
 
 // ============================================================================
-// 3. Render Plugin Releases & Changelog
+// 3. Central Version Data Loader (Local JSON + GitHub API Fallback)
 // ============================================================================
-function renderReleasesArchive() {
-  const $container = $("#releasesArchiveList");
-  if (!$container.length) return;
+async function initVersionData() {
+  try {
+    const res = await fetch("assets/version.json", { cache: "no-store" });
+    if (res.ok) {
+      const data = await res.json();
+      activeVersionConfig = { ...DEFAULT_VERSION_CONFIG, ...data };
+    }
+  } catch (err) {
+    console.warn("[MobCam] Using local fallback version config:", err);
+  }
 
-  $container.empty();
-
-  PLUGIN_RELEASES.forEach((rel) => {
-    const isLatest = rel.isLatest;
-    const latestBadge = isLatest
-      ? `<span class="badge-latest ms-2"><i class="fas fa-sparkles me-1"></i>LATEST STABLE</span>`
-      : `<span class="badge bg-secondary ms-2">ARCHIVED</span>`;
-
-    // Render plain bullet points without badges as requested
-    let changelogHtml = "";
-    rel.changelog.forEach(text => {
-      changelogHtml += `<li>${text}</li>`;
+  // Optionally query GitHub API for releases without exposing credentials
+  try {
+    const ghRes = await fetch("https://api.github.com/repos/ybrdigital/mobcam/releases/latest", {
+      headers: { Accept: "application/vnd.github.v3+json" }
     });
+    if (ghRes.ok) {
+      const ghData = await ghRes.json();
+      if (ghData && ghData.assets && ghData.assets.length > 0) {
+        const setupAsset = ghData.assets.find(a => a.name.endsWith(".exe") || a.name.includes("Setup"));
+        if (setupAsset) {
+          activeVersionConfig.downloadUrl = setupAsset.browser_download_url;
+          activeVersionConfig.installerFilename = setupAsset.name;
+          activeVersionConfig.fileSize = `${(setupAsset.size / (1024 * 1024)).toFixed(1)} MB`;
+        }
+      }
+      if (ghData.tag_name) {
+        activeVersionConfig.version = ghData.tag_name.replace(/^v/, "");
+        activeVersionConfig.tag = ghData.tag_name;
+      }
+    }
+  } catch (ghErr) {
+    // Graceful fallback to verified bundled asset
+    console.debug("[MobCam] GitHub Releases API query skipped or rate-limited:", ghErr);
+  }
 
-    const releaseCardHtml = `
-      <div class="release-card ${isLatest ? 'latest' : ''}" id="release-${rel.version}">
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
-          <div class="d-flex align-items-center flex-wrap gap-2">
-            <span class="badge-version">v${rel.version}</span>
-            ${latestBadge}
-            <span class="text-muted-custom fs-sm"><i class="far fa-calendar-alt me-1"></i>Released: ${rel.releaseDate}</span>
-            <span class="badge bg-dark border border-secondary text-dim fs-xs"><i class="fab fa-windows me-1"></i>${rel.windowsCompatibility}</span>
-            <span class="badge bg-dark border border-secondary text-dim fs-xs"><i class="fas fa-video me-1"></i>${rel.obsCompatibility}</span>
-          </div>
-          <div class="d-flex align-items-center gap-2">
-            <a href="${rel.installerPath}" class="btn btn-sm btn-primary-green download-btn" download data-version="${rel.version}">
-              <i class="fas fa-download me-1"></i> Download Windows Installer (${rel.installerSize})
-            </a>
-          </div>
-        </div>
+  applyVersionDataToUI(activeVersionConfig);
+}
 
-        <div class="changelog-box mb-3">
-          <h6 class="text-white fw-bold mb-2 fs-sm text-uppercase tracking-wider">
-            <i class="fas fa-list-check text-green me-2"></i>Release Notes & Improvements
-          </h6>
-          <ul class="release-notes-list mb-0">
-            ${changelogHtml}
-          </ul>
-        </div>
-
-        <div class="checksum-box">
-          <div class="d-flex align-items-center gap-2 flex-grow-1 overflow-hidden">
-            <span class="checksum-label"><i class="fas fa-shield-halved me-1"></i>SHA-256:</span>
-            <code class="text-truncate">${rel.sha256}</code>
-          </div>
-          <button class="btn-copy-checksum" data-hash="${rel.sha256}" title="Copy SHA-256 Checksum">
-            <i class="far fa-copy me-1"></i><span>Copy</span>
-          </button>
-        </div>
-      </div>
-    `;
-
-    $container.append(releaseCardHtml);
+function applyVersionDataToUI(cfg) {
+  // Update all download buttons
+  const downloadBtns = document.querySelectorAll(".primary-download-btn");
+  downloadBtns.forEach(btn => {
+    btn.setAttribute("href", cfg.downloadUrl);
+    btn.setAttribute("download", cfg.installerFilename);
   });
+
+  // Update dynamic text elements
+  const elVer = document.querySelectorAll(".dynamic-version-tag");
+  elVer.forEach(el => el.textContent = `v${cfg.version}`);
+
+  const elSize = document.querySelectorAll(".dynamic-file-size");
+  elSize.forEach(el => el.textContent = cfg.fileSize);
+
+  const elDate = document.querySelectorAll(".dynamic-release-date");
+  elDate.forEach(el => el.textContent = cfg.releaseDate);
+
+  const elHash = document.querySelectorAll(".dynamic-sha256");
+  elHash.forEach(el => el.textContent = cfg.sha256);
+
+  const elCopy = document.querySelectorAll(".btn-copy-checksum");
+  elCopy.forEach(btn => btn.setAttribute("data-hash", cfg.sha256));
 }
 
 // ============================================================================
-// 4. Checksum Clipboard Copy Handler
+// 4. SHA-256 Checksum Copy Helper
 // ============================================================================
 function initCopyChecksum() {
-  $(document).on("click", ".btn-copy-checksum", function (e) {
-    e.preventDefault();
-    const hash = $(this).attr("data-hash");
-    const $btn = $(this);
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn-copy-checksum");
+    if (!btn) return;
 
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(hash).then(() => {
-        showCopyFeedback($btn);
-      }).catch(() => {
-        fallbackCopyText(hash, $btn);
-      });
-    } else {
-      fallbackCopyText(hash, $btn);
-    }
+    const hash = btn.getAttribute("data-hash") || activeVersionConfig.sha256;
+    if (!hash) return;
+
+    navigator.clipboard.writeText(hash).then(() => {
+      const origText = btn.innerHTML;
+      btn.innerHTML = `<i class="fas fa-check text-green me-1"></i><span>Copied!</span>`;
+      btn.classList.add("copied");
+      setTimeout(() => {
+        btn.innerHTML = origText;
+        btn.classList.remove("copied");
+      }, 2500);
+    }).catch(err => {
+      console.error("Failed to copy checksum:", err);
+    });
   });
 }
 
-function showCopyFeedback($btn) {
-  const originalHtml = $btn.html();
-  $btn.html('<i class="fas fa-check text-green me-1"></i><span class="text-green">Copied!</span>');
-  setTimeout(() => {
-    $btn.html(originalHtml);
-  }, 2200);
-}
-
-function fallbackCopyText(text, $btn) {
-  const $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val(text).select();
-  document.execCommand("copy");
-  $temp.remove();
-  showCopyFeedback($btn);
-}
-
 // ============================================================================
-// 5. Smooth Scrolling for Navigation
+// 5. Smooth Scroll Navigation
 // ============================================================================
 function initSmoothScroll() {
-  $('a.nav-link[href^="#"], a.smooth-scroll[href^="#"]').on("click", function (e) {
-    const target = $(this.getAttribute("href"));
-    if (target.length) {
-      e.preventDefault();
-      // Close mobile navbar if open
-      const $navbarCollapse = $(".navbar-collapse");
-      if ($navbarCollapse.hasClass("show")) {
-        $navbarCollapse.collapse("hide");
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      const targetId = this.getAttribute("href");
+      if (targetId === "#" || targetId.length <= 1) return;
+
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const navHeight = document.querySelector("#mainNav")?.offsetHeight || 70;
+        const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+
+        // Close mobile navbar if open
+        const navCollapse = document.querySelector(".navbar-collapse");
+        if (navCollapse && navCollapse.classList.contains("show")) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+          if (bsCollapse) bsCollapse.hide();
+        }
       }
-
-      $("html, body").stop().animate({
-        scrollTop: target.offset().top - 80
-      }, 500);
-    }
-  });
-}
-
-// ============================================================================
-// 6. Download Tracking & In-Page Instructions Toast
-// ============================================================================
-function initDownloadFeedback() {
-  $(document).on("click", ".download-btn", function () {
-    const ver = $(this).data("version") || "1.0.0";
-    showDownloadToast(ver);
-  });
-}
-
-function showDownloadToast(version) {
-  const toastHtml = `
-    <div class="download-toast shadow-lg" id="dlToast">
-      <div class="d-flex align-items-center gap-3">
-        <div class="toast-icon">
-          <i class="fas fa-check-circle text-green fs-4"></i>
-        </div>
-        <div class="toast-body-content">
-          <h6 class="mb-1 text-white fw-bold">Downloading MobCam Plugin v${version}</h6>
-          <p class="mb-0 text-white fs-xs">
-            Run the setup installer, restart OBS Studio, and add a new <strong>"MobCam Source"</strong> in your scene.
-          </p>
-        </div>
-        <button type="button" class="btn-close btn-close-white ms-auto" aria-label="Close" onclick="$('#dlToast').fadeOut(300, function(){ $(this).remove(); });"></button>
-      </div>
-    </div>
-  `;
-
-  // Remove existing toast if any
-  $("#dlToast").remove();
-  $("body").append(toastHtml);
-  $("#dlToast").fadeIn(300);
-
-  // Auto-dismiss after 7 seconds
-  setTimeout(() => {
-    $("#dlToast").fadeOut(400, function () {
-      $(this).remove();
     });
-  }, 7000);
+  });
 }
 
 // ============================================================================
-// 7. Navbar Styling on Scroll
+// 6. Sticky Navbar Background Blur & Scroll State
 // ============================================================================
 function initNavbarScroll() {
-  const $nav = $(".navbar-custom");
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 40) {
-      $nav.addClass("scrolled");
+  const navbar = document.querySelector("#mainNav");
+  if (!navbar) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add("scrolled");
     } else {
-      $nav.removeClass("scrolled");
+      navbar.classList.remove("scrolled");
     }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+}
+
+// ============================================================================
+// 7. Screenshot Lightbox / Modal Viewer
+// ============================================================================
+function initScreenshotLightbox() {
+  const modalEl = document.getElementById("screenshotModal");
+  if (!modalEl) return;
+
+  const modalImg = modalEl.querySelector(".modal-screenshot-img");
+  const modalTitle = modalEl.querySelector(".modal-title");
+
+  document.querySelectorAll("[data-bs-toggle='lightbox']").forEach(item => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const imgSrc = item.getAttribute("data-src") || item.getAttribute("href");
+      const imgAlt = item.getAttribute("data-caption") || item.querySelector("img")?.alt || "Screenshot";
+      if (modalImg && imgSrc) {
+        modalImg.src = imgSrc;
+        modalImg.alt = imgAlt;
+      }
+      if (modalTitle) {
+        modalTitle.textContent = imgAlt;
+      }
+      const bsModal = new bootstrap.Modal(modalEl);
+      bsModal.show();
+    });
   });
 }
 
@@ -224,6 +211,8 @@ function initNavbarScroll() {
 // 8. Dynamic Copyright Year
 // ============================================================================
 function setDynamicYear() {
-  const currentYear = new Date().getFullYear();
-  $("#currentYear").text(currentYear);
+  const yearEl = document.getElementById("currentYear");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 }

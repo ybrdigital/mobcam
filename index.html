@@ -3,36 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MobCam - OBS Studio Camera | Turn Your Android Phone into a Studio Camera for OBS Studio</title>
-  
+  <title>MobCam - Android Camera for OBS Studio | YBR Digital</title>
+
   <!-- SEO & Social Meta -->
-  <meta name="description" content="MobCam - OBS Studio Camera: Broadcast ultra-low latency 4K UHD and 60 FPS video directly from your Android phone into OBS Studio via USB cable or 5GHz Wi-Fi with in-OBS remote controls.">
-  <meta name="keywords" content="MobCam, OBS Studio Camera, OBS Studio, Android webcam, DroidCam alternative, 4K camera for OBS, streaming camera, USB tethering camera, OBS plugin">
-  <meta name="author" content="Yash Rayjada">
-  <meta property="og:title" content="MobCam - OBS Studio Camera | Studio-Grade Android Camera for OBS Studio">
-  <meta property="og:description" content="Turn your Android phone into a high-performance 4K 60FPS camera in OBS Studio with ultra-low latency and integrated in-OBS Studio quick controls.">
+  <meta name="description" content="Turn your Android phone into a professional OBS Studio camera. Stream high-quality video and audio over Wi-Fi or USB with the MobCam OBS Plugin.">
+  <meta name="keywords" content="MobCam, OBS Studio, Android Camera, OBS Plugin, webcam, live streaming, 4K streaming, low latency, USB camera, wireless camera, YBR Digital">
+  <meta name="author" content="YBR Digital">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ybrdigital.github.io/mobcam/">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ybrdigital.github.io/mobcam/">
-  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:title" content="MobCam - Android Camera for OBS Studio | YBR Digital">
+  <meta property="og:description" content="Turn your Android phone into a professional OBS Studio camera. Stream high-quality video and audio over Wi-Fi or USB with the MobCam OBS Plugin.">
+  <meta property="og:image" content="https://ybrdigital.github.io/mobcam/assets/img/hero-obs-phone-setup.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ybrdigital.github.io/mobcam/">
+  <meta name="twitter:title" content="MobCam - Android Camera for OBS Studio | YBR Digital">
+  <meta name="twitter:description" content="Turn your Android phone into a professional OBS Studio camera. Stream high-quality video and audio over Wi-Fi or USB with the MobCam OBS Plugin.">
+  <meta name="twitter:image" content="https://ybrdigital.github.io/mobcam/assets/img/hero-obs-phone-setup.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/icon_512.png">
 
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap 5.3.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- FontAwesome 6 CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom Styles -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MobCam OBS Studio Plugin",
+    "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+    "applicationCategory": "MultimediaApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Turn your Android phone into a professional OBS Studio camera. Stream high-quality video and audio over Wi-Fi or USB with the MobCam OBS Plugin.",
+    "softwareVersion": "1.0.0",
+    "author": {
+      "@type": "Organization",
+      "name": "YBR Digital",
+      "url": "https://www.ybrdigital.in"
+    },
+    "downloadUrl": "https://ybrdigital.github.io/mobcam/assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe"
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
 
   <!-- ====================================================================
        Sticky Navigation Bar
@@ -40,7 +82,7 @@
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav">
     <div class="container-fluid px-lg-4 px-xl-5">
       <a class="navbar-brand" href="#home">
-        <img src="assets/img/logo.png" alt="MobCam Logo" width="32" height="32">
+        <img src="assets/img/logo.png" alt="MobCam Logo" width="34" height="34">
         <span>MobCam</span>
       </a>
       <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,20 +92,20 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#how-it-works">Setup Guide</a></li>
-          <li class="nav-item"><a class="nav-link" href="#plugin">OBS Studio Plugin</a></li>
-          <li class="nav-item"><a class="nav-link" href="#releases">All Versions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#specs">Tech Specs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#screenshots">Screenshots</a></li>
+          <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
+          <li class="nav-item"><a class="nav-link" href="#documentation">Documentation</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer"><i class="fab fa-github me-1"></i> GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
         </ul>
 
-        <div class="navbar-actions">
-          <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn btn-outline-green btn-nav">
-            <i class="fab fa-google-play me-1"></i> Google Play
+        <div class="navbar-actions d-flex align-items-center gap-2">
+          <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn-nav-outline">
+            <i class="fab fa-google-play me-1 text-green"></i> Google Play
           </a>
-          <a href="#plugin" class="btn btn-primary-green btn-nav smooth-scroll">
-            <i class="fas fa-download me-1"></i> Get Plugin
+          <a href="#download" class="btn-primary-green primary-download-btn py-2 px-3 fs-sm">
+            <i class="fas fa-download"></i> Download for Windows
           </a>
         </div>
       </div>
@@ -76,64 +118,46 @@
   <section class="hero-section" id="home">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-lg-10 col-xl-9">
+        <div class="col-lg-11 col-xl-10">
           <div class="hero-pill">
-            <i class="fas fa-circle-check text-green"></i>
-            <span>v1.0.0 Released &bull; Ultra-Low Latency Streaming Engine</span>
+            <i class="fas fa-check-circle"></i>
+            <span>MobCam OBS Studio Plugin <span class="dynamic-version-tag">v1.0.0</span> &bull; Open Source on GitHub</span>
           </div>
 
-          <h1 class="hero-title max-w-850 mx-auto">
-            Turn Your Android Phone into a <span class="text-gradient">Studio Camera</span> for OBS Studio
+          <h1 class="hero-title">
+            Your Android Phone. <br class="d-none d-md-block">
+            Your <span class="text-gradient">Professional OBS Camera</span>.
           </h1>
 
-          <p class="hero-desc mx-auto mb-4">
-            Broadcast crisp 1080p and 4K UHD video directly into OBS Studio with ultra-low latency over Wi-Fi or USB, auto 16:9 landscape orientation lock, and in-OBS remote controls right from your PC dock.
+          <p class="hero-desc mx-auto">
+            Turn your Android smartphone into a high-quality wireless or USB camera for OBS Studio. Stream video and audio directly into OBS with low latency and professional camera controls.
           </p>
 
-          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-4">
-            <!-- Windows Plugin Setup -->
-            <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green download-btn" download data-version="1.0.0">
+          <!-- Verified Feature Highlights -->
+          <div class="hero-highlights-grid">
+            <span class="hero-badge-tag"><i class="fas fa-circle"></i> Up to 4K UHD</span>
+            <span class="hero-badge-tag"><i class="fas fa-circle"></i> Up to 60 FPS</span>
+            <span class="hero-badge-tag"><i class="fas fa-circle"></i> Wi-Fi and USB connectivity</span>
+            <span class="hero-badge-tag"><i class="fas fa-circle"></i> Integrated OBS source</span>
+            <span class="hero-badge-tag"><i class="fas fa-circle"></i> Synchronized audio</span>
+            <span class="hero-badge-tag"><i class="fas fa-circle"></i> Camera controls inside OBS</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+            <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green primary-download-btn" download>
               <i class="fab fa-windows fs-5"></i>
-              <div class="text-start">
-                <span class="d-block text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em; font-weight: 800;">Download Windows Plugin</span>
-                <span class="d-block" style="font-size: 1.05rem; font-weight: 900; line-height: 1.1;">OBS Studio 64-bit (v1.0.0)</span>
-              </div>
+              <span>Download for Windows</span>
             </a>
-
-            <!-- Google Play Store Button -->
-            <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn-playstore">
-              <i class="fab fa-google-play fs-3 text-green"></i>
-              <div class="text-start">
-                <span class="store-sub">GET IT ON</span>
-                <span class="store-title d-block">Google Play</span>
-              </div>
+            <a href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer" class="btn-secondary-dark">
+              <i class="fab fa-github fs-5"></i>
+              <span>View Source Code</span>
             </a>
           </div>
 
-          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-4">
-            <span class="text-muted-custom fs-sm">
-              <i class="fab fa-google-play text-green me-1"></i> Android app available exclusively on Google Play
-            </span>
-            <span class="text-dim">•</span>
-            <a href="#releases" class="text-muted-custom fs-sm text-decoration-none hover-green smooth-scroll">
-              <i class="fas fa-history text-green me-1"></i> Browse All Versions &amp; Release Notes
-            </a>
-          </div>
-
-          <!-- Feature Badges Row -->
-          <div class="hero-badges-row justify-content-center">
-            <div class="hero-badge-item">
-              <i class="fas fa-bolt text-green"></i> Ultra-Low Latency Mode
-            </div>
-            <div class="hero-badge-item">
-              <i class="fas fa-sliders text-green"></i> OBS Browser Dock
-            </div>
-            <div class="hero-badge-item">
-              <i class="fas fa-rotate text-green"></i> Auto 16:9 Landscape Lock
-            </div>
-            <div class="hero-badge-item">
-              <i class="fas fa-shield-halved text-green"></i> 100% Local P2P Stream
-            </div>
+          <!-- Hero Visual: Android phone connected to OBS Studio on Windows PC -->
+          <div class="hero-visual-card">
+            <img src="assets/img/hero-obs-phone-setup.png" alt="MobCam Android Phone connected to OBS Studio on Windows PC" width="1870" height="841" loading="eager">
           </div>
         </div>
       </div>
@@ -141,17 +165,15 @@
   </section>
 
   <!-- ====================================================================
-       Key Features Grid
+       Features Section (9 Confirmed Feature Cards)
        ==================================================================== -->
-  <section class="py-5" id="features">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-          Engineered for Streamers &amp; Creators
-        </span>
-        <h2 class="h1 fw-bold text-white mb-3">Everything You Need for Studio-Grade Video</h2>
-        <p class="text-muted-custom">
-          Transform any Android phone into a high-fidelity video capture device without expensive capture cards or external webcams.
+  <section class="section-py" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Engineered for Creators</span>
+        <h2 class="section-title">Professional Camera Features in OBS Studio</h2>
+        <p class="section-subtitle">
+          Everything you need to turn your mobile device into a dedicated, broadcast-grade video and audio source for OBS Studio.
         </p>
       </div>
 
@@ -160,12 +182,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-bolt"></i>
+              <i class="fas fa-tv"></i>
             </div>
-            <h4 class="feature-title">Ultra-Low Latency Mode</h4>
-            <p class="feature-desc">
-              Engineered for real-time responsiveness across both high-speed Wi-Fi and wired USB tethering with zero jitter, perfect for competitive gaming and live interactive streaming.
-            </p>
+            <h3>4K UHD Video Streaming</h3>
+            <p>Broadcast crystal-clear 1080p and pristine 4K UHD resolutions directly into your OBS scenes with rich color fidelity and sharp detail.</p>
           </div>
         </div>
 
@@ -173,12 +193,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-sliders"></i>
+              <i class="fas fa-gauge-high"></i>
             </div>
-            <h4 class="feature-title">In-OBS Studio Quick Controls</h4>
-            <p class="feature-desc">
-              Control your phone's camera settings directly from inside OBS Studio via our integrated browser dock. Adjust zoom, torch, autofocus, and exposure in real-time.
-            </p>
+            <h3>Up to 60 FPS</h3>
+            <p>Silky-smooth high-framerate video capture engineered for live gameplay streaming, tutorials, product reviews, and esports without jitter.</p>
           </div>
         </div>
 
@@ -186,12 +204,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-rotate"></i>
+              <i class="fas fa-bolt-lightning"></i>
             </div>
-            <h4 class="feature-title">Auto 16:9 Landscape Lock</h4>
-            <p class="feature-desc">
-              MobCam automatically locks your video to standard 16:9 widescreen landscape upon streaming. Say goodbye to black vertical pillarboxes on your canvas.
-            </p>
+            <h3>Ultra-Low Latency</h3>
+            <p>Direct peer-to-peer transmission pipeline optimized for real-time responsiveness over Wi-Fi and USB, eliminating awkward video lag.</p>
           </div>
         </div>
 
@@ -199,12 +215,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-video"></i>
+              <i class="fas fa-wifi"></i>
             </div>
-            <h4 class="feature-title">4K UHD &amp; 60 FPS Capture</h4>
-            <p class="feature-desc">
-              Broadcast in crystal-clear 1080p Full HD or uncompressed 4K UHD at silky-smooth 60 FPS for ultra-crisp motion clarity and professional stream quality.
-            </p>
+            <h3>Wireless Wi-Fi Streaming</h3>
+            <p>Wire-free broadcast freedom across your local 5 GHz Wi-Fi network with automatic UDP device discovery on port 4748.</p>
           </div>
         </div>
 
@@ -212,12 +226,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-microchip"></i>
+              <i class="fab fa-usb"></i>
             </div>
-            <h4 class="feature-title">Hardware MediaCodec Pipeline</h4>
-            <p class="feature-desc">
-              Leverages your phone's native GPU encoder for AVC/H.264, HEVC/H.265, and MJPEG with minimal battery drain and pristine YUV420 color precision.
-            </p>
+            <h3>USB Tethering</h3>
+            <p>Plug-and-play wired connectivity via USB tethering or ADB reverse tunneling for rock-solid stability in noisy RF environments.</p>
           </div>
         </div>
 
@@ -225,12 +237,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-sliders-simple"></i>
+              <i class="fas fa-plug"></i>
             </div>
-            <h4 class="feature-title">Studio Camera Suite</h4>
-            <p class="feature-desc">
-              Fine-tune your video quality with manual Exposure Value (EV) compensation, White Balance lock, and multi-point Autofocus modes (Continuous, Macro, Locked).
-            </p>
+            <h3>Integrated OBS Source</h3>
+            <p>Native libobs C plugin module (<code class="text-green">MobCam Source</code>) appearing directly inside your OBS Studio Sources dropdown list.</p>
           </div>
         </div>
 
@@ -238,12 +248,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-volume-high"></i>
+              <i class="fas fa-sliders"></i>
             </div>
-            <h4 class="feature-title">Synchronized 48 kHz Audio</h4>
-            <p class="feature-desc">
-              High-fidelity 48 kHz stereo AAC microphone capture with sub-millisecond hardware timestamp synchronization directly into the OBS Audio Mixer.
-            </p>
+            <h3>Built-in Camera Controls</h3>
+            <p>Embedded in-OBS web dock (<code class="text-green">Docks &gt; MobCam Controls</code>) to adjust zoom presets (1x, 1.5x, 2x), flash, autofocus, and exposure remotely.</p>
           </div>
         </div>
 
@@ -251,12 +259,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-wifi"></i>
+              <i class="fas fa-microphone-lines"></i>
             </div>
-            <h4 class="feature-title">High-Speed 5 GHz Wi-Fi</h4>
-            <p class="feature-desc">
-              Stream wirelessly over high-bandwidth 5 GHz Wi-Fi with automatic subnet discovery and dynamic network IP auto-recovery without stream disruption.
-            </p>
+            <h3>Synchronized Audio</h3>
+            <p>High-fidelity 48 kHz stereo microphone capture with microsecond timestamp synchronization feeding directly into the OBS Audio Mixer.</p>
           </div>
         </div>
 
@@ -264,12 +270,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-card">
             <div class="feature-icon-box">
-              <i class="fas fa-shield-halved"></i>
+              <i class="fas fa-microchip"></i>
             </div>
-            <h4 class="feature-title">100% Local P2P Privacy</h4>
-            <p class="feature-desc">
-              Zero cloud recording and zero third-party telemetry. All video frames and audio packets stay strictly inside your local home network or USB cable.
-            </p>
+            <h3>Hardware-Accelerated Encoding</h3>
+            <p>Leverages Android MediaCodec hardware encoders (H.264 / HEVC) paired with native FFmpeg decoding in OBS for optimal CPU performance.</p>
           </div>
         </div>
       </div>
@@ -277,179 +281,311 @@
   </section>
 
   <!-- ====================================================================
-       OBS Plugin Highlights
+       How It Works (Three-Step Process)
        ==================================================================== -->
-  <section class="py-5" id="plugin" style="background: linear-gradient(180deg, transparent 0%, rgba(0, 230, 118, 0.02) 50%, transparent 100%);">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-          Official Windows OBS Plugin
-        </span>
-        <h2 class="h1 fw-bold text-white mb-3">Native Integration with OBS Studio</h2>
-        <p class="text-muted-custom">
-          No virtual camera drivers, no desktop capture overhead. MobCam registers directly as a native source inside OBS Studio for zero-copy YUV420 GPU rendering and synced 48 kHz stereo audio.
+  <section class="section-py" id="how-it-works" style="background: rgba(14, 20, 34, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Quick Setup</span>
+        <h2 class="section-title">Get Streaming in Three Simple Steps</h2>
+        <p class="section-subtitle">
+          Connect your Android phone to OBS Studio over Wi-Fi or wired USB in under two minutes.
         </p>
       </div>
 
-      <div class="row g-4 justify-content-center mb-5">
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-check"></i>
-            </div>
-            <h4 class="feature-title">Direct Scene Source</h4>
-            <p class="feature-desc">
-              Add <code>MobCam Source</code> directly from the OBS Sources menu. Select your Android phone with automatic discovery.
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-lg-4">
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-badge"><i class="fab fa-android"></i> Android</div>
+            <h3 class="mb-3">Install MobCam on Android</h3>
+            <p class="text-muted-custom mb-3">
+              Download and launch MobCam from the Google Play Store on your Android smartphone (Android 8.0 or newer).
             </p>
+            <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-nav-outline">
+              <i class="fab fa-google-play me-1 text-green"></i> Get on Google Play
+            </a>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-sliders"></i>
-            </div>
-            <h4 class="feature-title">In-OBS Browser Dock</h4>
-            <p class="feature-desc">
-              Open <code>Docks</code> &gt; <code>MobCam Controls</code> inside OBS Studio to toggle flashlight, change zoom, adjust EV, or switch cameras without touching your phone.
+        <!-- Step 2 -->
+        <div class="col-lg-4">
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-badge"><i class="fab fa-windows"></i> Windows</div>
+            <h3 class="mb-3">Install the OBS Plugin</h3>
+            <p class="text-muted-custom mb-3">
+              Download and run the Windows 64-bit installer setup wizard with OBS Studio closed. The plugin automatically registers inside OBS.
             </p>
+            <a href="#download" class="btn btn-sm btn-nav-outline">
+              <i class="fas fa-download me-1 text-green"></i> Download Installer
+            </a>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-volume-high"></i>
-            </div>
-            <h4 class="feature-title">Synchronized 48 kHz Audio</h4>
-            <p class="feature-desc">
-              Captures high-fidelity microphone audio with sub-millisecond timestamp synchronization directly into the OBS Audio Mixer.
+        <!-- Step 3 -->
+        <div class="col-lg-4">
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-badge"><i class="fas fa-video"></i> OBS Studio</div>
+            <h3 class="mb-3">Connect &amp; Add MobCam Source</h3>
+            <p class="text-muted-custom mb-3">
+              In OBS Studio, click <strong>+</strong> under Sources &rarr; <strong>MobCam Source</strong>. Connect via 5 GHz Wi-Fi or USB tethering, enter the 6-digit PIN, and start streaming!
             </p>
+            <a href="https://github.com/ybrdigital/mobcam/blob/main/docs/installation.md" class="btn btn-sm btn-nav-outline" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-book me-1 text-green"></i> View Setup Guide
+            </a>
           </div>
         </div>
-      </div>
-
-      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-        <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green download-btn" download data-version="1.0.0">
-          <i class="fas fa-download"></i> Download Windows Installer (.exe)
-        </a>
-        <a href="#releases" class="btn-outline-green smooth-scroll">
-          <i class="fas fa-archive"></i> Release Archive
-        </a>
       </div>
     </div>
   </section>
 
   <!-- ====================================================================
-       Step-by-Step Connection Guide (Interactive Tabs)
+       Product Screenshots Gallery
        ==================================================================== -->
-  <section class="py-5" id="how-it-works">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-          Setup in Under 60 Seconds
-        </span>
-        <h2 class="h1 fw-bold text-white mb-3">How to Connect to OBS Studio</h2>
-        <p class="text-muted-custom">
-          Connect effortlessly using wireless Wi-Fi or ultra-low latency wired USB tethering.
+  <section class="section-py" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Product Tour</span>
+        <h2 class="section-title">Built for Modern Streaming Workflows</h2>
+        <p class="section-subtitle">
+          Real screenshots showcasing the MobCam Android interface and native OBS Studio integration.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Screenshot 1 -->
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/screenshots/mobcam-android-app.png" class="screenshot-item" data-bs-toggle="lightbox" data-src="assets/screenshots/mobcam-android-app.png" data-caption="MobCam Android Camera Interface">
+            <img src="assets/screenshots/mobcam-android-app.png" alt="MobCam Android Camera Interface" loading="lazy">
+            <div class="screenshot-caption">
+              <span>Android Camera Interface</span>
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Screenshot 2 -->
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/screenshots/app-feature-in-obs-controls.png" class="screenshot-item" data-bs-toggle="lightbox" data-src="assets/screenshots/app-feature-in-obs-controls.png" data-caption="OBS MobCam Controls Dock">
+            <img src="assets/screenshots/app-feature-in-obs-controls.png" alt="OBS MobCam Controls Dock" loading="lazy">
+            <div class="screenshot-caption">
+              <span>In-OBS Quick Controls Dock</span>
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Screenshot 3 -->
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/screenshots/app-feature-direct-source.png" class="screenshot-item" data-bs-toggle="lightbox" data-src="assets/screenshots/app-feature-direct-source.png" data-caption="OBS MobCam Source Properties">
+            <img src="assets/screenshots/app-feature-direct-source.png" alt="OBS MobCam Source Properties" loading="lazy">
+            <div class="screenshot-caption">
+              <span>OBS Source Properties</span>
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Screenshot 4 -->
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/screenshots/app-feature-ultra-low-latency.png" class="screenshot-item" data-bs-toggle="lightbox" data-src="assets/screenshots/app-feature-ultra-low-latency.png" data-caption="Ultra-Low Latency Mode">
+            <img src="assets/screenshots/app-feature-ultra-low-latency.png" alt="Ultra-Low Latency Mode" loading="lazy">
+            <div class="screenshot-caption">
+              <span>Ultra-Low Latency Mode</span>
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Screenshot 5 -->
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/screenshots/app-feature-4k-uhd.png" class="screenshot-item" data-bs-toggle="lightbox" data-src="assets/screenshots/app-feature-4k-uhd.png" data-caption="4K UHD Video Streaming">
+            <img src="assets/screenshots/app-feature-4k-uhd.png" alt="4K UHD Video Streaming" loading="lazy">
+            <div class="screenshot-caption">
+              <span>4K UHD Video Streaming</span>
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Screenshot 6 -->
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/screenshots/app-feature-wifi-usb.png" class="screenshot-item" data-bs-toggle="lightbox" data-src="assets/screenshots/app-feature-wifi-usb.png" data-caption="5 GHz Wi-Fi & USB Connectivity">
+            <img src="assets/screenshots/app-feature-wifi-usb.png" alt="5 GHz Wi-Fi & USB Connectivity" loading="lazy">
+            <div class="screenshot-caption">
+              <span>Wi-Fi &amp; USB Connectivity</span>
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       Download Section
+       ==================================================================== -->
+  <section class="section-py" id="download">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Official Release</span>
+        <h2 class="section-title">Download MobCam OBS Studio Plugin</h2>
+        <p class="section-subtitle">
+          Free, native Windows 64-bit installer for OBS Studio 28.0 - 31.0+.
         </p>
       </div>
 
       <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="download-master-box">
+            <div class="row align-items-center g-4 mb-4">
+              <div class="col-md-7">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <img src="assets/img/logo.png" alt="MobCam Logo" width="56" height="56" class="rounded-3 shadow-sm">
+                  <div>
+                    <h3 class="mb-1 fs-4">MobCam OBS Studio Plugin</h3>
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                      <span class="badge bg-success-subtle text-green border border-success-subtle px-2 py-1 fs-xs fw-bold dynamic-version-tag">v1.0.0</span>
+                      <span class="text-muted-custom fs-sm"><i class="far fa-calendar-alt me-1"></i> <span class="dynamic-release-date">September 25, 2026</span></span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-muted-custom fs-sm mb-0">
+                  Native x64 C plugin with Inno Setup installer. Automatically verifies OBS Studio prerequisites and installs the native source module and embedded quick controls dock.
+                </p>
+              </div>
+
+              <div class="col-md-5 text-md-end">
+                <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green primary-download-btn w-100 py-3 fs-6" download>
+                  <i class="fas fa-download fs-5"></i>
+                  <div>
+                    <div class="fw-bold">Download for Windows</div>
+                    <div class="fs-xs fw-normal opacity-75">x64 Installer (<span class="dynamic-file-size">2.1 MB</span>)</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Specs Grid -->
+            <div class="row g-2 mb-4">
+              <div class="col-sm-6 col-md-3">
+                <div class="spec-badge-pill">
+                  <i class="fab fa-windows"></i>
+                  <span>Windows 10 / 11 (64-bit)</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="spec-badge-pill">
+                  <i class="fas fa-microchip"></i>
+                  <span>Architecture: x64</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="spec-badge-pill">
+                  <i class="fas fa-video"></i>
+                  <span>OBS 28.0 - 31.0+</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="spec-badge-pill">
+                  <i class="fas fa-scale-balanced"></i>
+                  <span>GPL-2.0-or-later</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SHA-256 Checksum Verification -->
+            <div class="checksum-container">
+              <div class="d-flex align-items-center gap-2 overflow-hidden">
+                <span class="text-dim fs-xs fw-bold text-uppercase font-mono"><i class="fas fa-shield-alt text-green me-1"></i>SHA-256:</span>
+                <code class="dynamic-sha256">A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB</code>
+              </div>
+              <button class="btn-copy-checksum" data-hash="A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB" title="Copy SHA-256 Checksum">
+                <i class="far fa-copy me-1"></i>Copy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       Installation Guide Summary
+       ==================================================================== -->
+  <section class="section-py" id="documentation" style="background: rgba(14, 20, 34, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Getting Started</span>
+        <h2 class="section-title">Plugin Installation Guide</h2>
+        <p class="section-subtitle">
+          Follow these simple steps to install and configure the MobCam plugin on your PC.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="feature-card p-4 p-md-5 mb-4">
+            <ol class="text-muted-custom mb-4" style="line-height: 2; padding-left: 1.25rem;">
+              <li><strong class="text-white">Download the Windows installer:</strong> Get <code class="text-green">MobCam-OBS-Plugin-v1.0.0-Setup.exe</code> from above.</li>
+              <li><strong class="text-white">Close OBS Studio:</strong> Make sure OBS Studio is completely closed before running setup.</li>
+              <li><strong class="text-white">Run the MobCam installer:</strong> Complete the installation wizard to place the plugin in your OBS plugins directory.</li>
+              <li><strong class="text-white">Open OBS Studio:</strong> Launch OBS Studio on Windows.</li>
+              <li><strong class="text-white">Add MobCam Source:</strong> In the Sources dock, click <strong class="text-white">+</strong> and select <code class="text-green">MobCam Source</code>.</li>
+              <li><strong class="text-white">Connect your Android device:</strong> Pair your phone via 5 GHz Wi-Fi or USB tethering, enter your 6-digit PIN, and begin streaming!</li>
+            </ol>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="https://github.com/ybrdigital/mobcam/blob/main/docs/installation.md" target="_blank" rel="noopener noreferrer" class="btn-primary-green fs-sm py-2 px-3">
+                <i class="fas fa-book-open"></i> View Detailed Installation Docs
+              </a>
+              <a href="https://github.com/ybrdigital/mobcam/blob/main/docs/troubleshooting.md" target="_blank" rel="noopener noreferrer" class="btn-secondary-dark fs-sm py-2 px-3">
+                <i class="fas fa-wrench"></i> Troubleshooting Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       Open Source Section
+       ==================================================================== -->
+  <section class="section-py" id="opensource">
+    <div class="container">
+      <div class="row justify-content-center">
         <div class="col-lg-10">
-          <ul class="nav setup-nav-pills" id="setupTabs" role="tablist">
-            <li class="nav-item flex-fill" role="presentation">
-              <button class="nav-link active w-100" id="wifi-tab" data-bs-toggle="pill" data-bs-target="#wifi-pane" type="button" role="tab" aria-selected="true">
-                <i class="fas fa-wifi me-2"></i>Option A: Wireless Wi-Fi (5 GHz)
-              </button>
-            </li>
-            <li class="nav-item flex-fill" role="presentation">
-              <button class="nav-link w-100" id="usb-tab" data-bs-toggle="pill" data-bs-target="#usb-pane" type="button" role="tab" aria-selected="false">
-                <i class="fab fa-usb me-2"></i>Option B: Wired USB Tethering
-              </button>
-            </li>
-            <li class="nav-item flex-fill" role="presentation">
-              <button class="nav-link w-100" id="dock-tab" data-bs-toggle="pill" data-bs-target="#dock-pane" type="button" role="tab" aria-selected="false">
-                <i class="fas fa-sliders me-2"></i>In-OBS Studio Quick Controls Dock
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-content" id="setupTabsContent">
-            <!-- Tab 1: Wi-Fi -->
-            <div class="tab-pane fade show active" id="wifi-pane" role="tabpanel" aria-labelledby="wifi-tab">
-              <div class="setup-step-box">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                  <h5>Install Android App &amp; Windows OBS Plugin</h5>
-                  <p>Install <strong>MobCam</strong> from the Google Play Store on your Android phone. Run <code>MobCam-OBS-Plugin-v1.0.0-Setup.exe</code> on your PC with OBS Studio closed.</p>
-                </div>
-              </div>
-              <div class="setup-step-box">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                  <h5>Connect to Same Wi-Fi Network &amp; Start Streaming</h5>
-                  <p>Ensure both your phone and PC are connected to the same Wi-Fi router (5 GHz recommended for minimal packet delay). Open MobCam on your phone and tap <strong>"Start Stream"</strong>. The app automatically locks to 16:9 landscape.</p>
-                </div>
-              </div>
-              <div class="setup-step-box">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                  <h5>Add MobCam Source in OBS Studio</h5>
-                  <p>Open OBS Studio, click <strong>+</strong> under Sources, and choose <strong>"MobCam Source"</strong>. Your phone appears automatically in the dropdown. Click <strong>OK</strong> to broadcast instantly!</p>
-                </div>
-              </div>
+          <div class="open-source-box text-center">
+            <div class="hero-pill mb-3">
+              <i class="fab fa-github"></i>
+              <span>Open Source OBS Studio Plugin</span>
             </div>
 
-            <!-- Tab 2: USB Cable -->
-            <div class="tab-pane fade" id="usb-pane" role="tabpanel" aria-labelledby="usb-tab">
-              <div class="setup-step-box">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                  <h5>Connect Phone to PC via USB Cable</h5>
-                  <p>Use a reliable USB 2.0 / USB 3.0 Type-C sync cable. Connect your Android phone directly to a high-speed USB port on your PC or streaming rig.</p>
-                </div>
-              </div>
-              <div class="setup-step-box">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                  <h5>Enable "USB Tethering" in Android Settings</h5>
-                  <p>Open Android <strong>Settings &gt; Network &amp; Internet &gt; Hotspot &amp; Tethering</strong>, and toggle <strong>"USB Tethering"</strong> ON. MobCam automatically detects the wired link.</p>
-                </div>
-              </div>
-              <div class="setup-step-box">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                  <h5>Experience Ultra-Low Latency Studio Feed</h5>
-                  <p>Launch OBS Studio and add the <strong>MobCam Source</strong>. Enjoy zero latency, immunity to Wi-Fi drops, and continuous phone battery charging while you stream.</p>
-                </div>
-              </div>
+            <h2 class="section-title mb-3">Built for OBS. Open for Everyone.</h2>
+
+            <p class="hero-desc mx-auto mb-4">
+              MobCam's native OBS Studio plugin is open source under the <strong>GPL-2.0-or-later</strong> license. Developers can explore the C implementation, build from source using CMake, contribute improvements, and report issues.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+              <a href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer" class="btn-primary-green">
+                <i class="fab fa-github fs-5"></i> View Source on GitHub
+              </a>
+              <a href="https://github.com/ybrdigital/mobcam/blob/main/docs/development.md" target="_blank" rel="noopener noreferrer" class="btn-secondary-dark">
+                <i class="fas fa-code fs-5"></i> Read Documentation
+              </a>
+              <a href="https://github.com/ybrdigital/mobcam/issues" target="_blank" rel="noopener noreferrer" class="btn-secondary-dark">
+                <i class="fas fa-bug fs-5"></i> Report an Issue
+              </a>
             </div>
 
-            <!-- Tab 3: OBS Dock -->
-            <div class="tab-pane fade" id="dock-pane" role="tabpanel" aria-labelledby="dock-tab">
-              <div class="setup-step-box">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                  <h5>Open the In-OBS Browser Dock</h5>
-                  <p>In OBS Studio, navigate to the top menu: <strong>Docks &gt; MobCam Controls</strong>. The dock will dock seamlessly next to your Audio Mixer or Scenes palette.</p>
-                </div>
-              </div>
-              <div class="setup-step-box">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                  <h5>Or Access via Local Web Browser</h5>
-                  <p>You can also open <code>http://localhost:4752/</code> in any browser (Chrome, Edge, Firefox) on your streaming PC or a secondary monitor or Stream Deck browser widget.</p>
-                </div>
-              </div>
-              <div class="setup-step-box">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                  <h5>Take Total Control During Live Streams</h5>
-                  <p>Toggle your flashlight torch, click zoom buttons (1.0x, 1.5x, 2.0x), adjust exposure, or lock autofocus without touching your phone or causing camera shake.</p>
-                </div>
-              </div>
-            </div>
+            <p class="fs-xs text-dim mb-0">
+              * Note: The MobCam Android mobile application is distributed separately through the Google Play Store and is not included in the plugin source repository.
+            </p>
           </div>
         </div>
       </div>
@@ -457,381 +593,135 @@
   </section>
 
   <!-- ====================================================================
-       Multi-Version OBS Plugin Release Archive & Changelog
+       FAQ Section
        ==================================================================== -->
-  <section class="py-5" id="releases">
-    <div class="container py-4">
-      <div class="d-flex flex-wrap align-items-end justify-content-between mb-4 gap-3">
-        <div>
-          <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-            Version Archive &amp; Release Notes
-          </span>
-          <h2 class="h1 fw-bold text-white mb-1">MobCam OBS Studio Plugin Releases</h2>
-          <p class="text-muted-custom mb-0">
-            Download current and past versions of the Windows 64-bit OBS Studio plugin with complete changelogs and SHA-256 verification hashes.
-          </p>
-        </div>
-
-        <div class="d-flex align-items-center gap-2">
-          <span class="text-muted-custom fs-xs"><i class="fas fa-filter text-green me-1"></i>Showing all production releases</span>
-        </div>
-      </div>
-
-      <!-- Dynamic Releases List Container (populated by main.js) -->
-      <div id="releasesArchiveList">
-        <!-- Rendered dynamically via js/main.js -->
-      </div>
-
-      <div class="p-3 rounded-3 bg-dark border border-secondary text-center mt-4">
-        <span class="text-muted-custom fs-xs">
-          <i class="fas fa-info-circle text-green me-1"></i>
-          Looking for custom builds or manual plugin zip packages? Check our official GitHub repository at 
-          <a href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer" class="text-green fw-bold text-decoration-none">github.com/ybrdigital/mobcam</a>.
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       Technical Specifications & System Requirements
-       ==================================================================== -->
-  <section class="py-5" id="specs" style="background: linear-gradient(180deg, transparent 0%, rgba(0, 230, 118, 0.02) 50%, transparent 100%);">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-          Hardware &amp; Software Compatibility
-        </span>
-        <h2 class="h1 fw-bold text-white mb-3">Technical Specifications</h2>
-        <p class="text-muted-custom">
-          Built strictly for Android devices and Windows OBS Studio 64-bit environments.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Mobile Specs -->
-        <div class="col-lg-6">
-          <div class="feature-card">
-            <div class="d-flex align-items-center gap-3 mb-4">
-              <div class="feature-icon-box mb-0">
-                <i class="fab fa-android"></i>
-              </div>
-              <div>
-                <h4 class="text-white mb-0">Android Mobile Requirements</h4>
-                <span class="text-muted-custom fs-xs">MobCam Android Client App</span>
-              </div>
-            </div>
-
-            <table class="table table-dark table-borderless fs-sm mb-0">
-              <tbody>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Operating System</td>
-                  <td class="text-white fw-bold py-2">Android 8.0 Oreo (API 26) or higher (Android 10+ recommended)</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Camera Architecture</td>
-                  <td class="text-white fw-bold py-2">CameraX 1.4 &amp; Camera2 HAL3 Hardware Support</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Video Encoders</td>
-                  <td class="text-white fw-bold py-2">Hardware MediaCodec: AVC (H.264), HEVC (H.265), MJPEG fallback</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Audio Sampling</td>
-                  <td class="text-white fw-bold py-2">48 kHz Stereo AAC with microsecond hardware timestamp sync</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Orientation Handling</td>
-                  <td class="text-white fw-bold py-2">Auto 16:9 Landscape Lock (prevents vertical pillarboxing)</td>
-                </tr>
-                <tr>
-                  <td class="text-muted-custom py-2">Streaming Protocols</td>
-                  <td class="text-white fw-bold py-2">Direct Local TCP (Port 4747), In-OBS Web Dock Server (Port 4752)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- PC / OBS Specs -->
-        <div class="col-lg-6">
-          <div class="feature-card">
-            <div class="d-flex align-items-center gap-3 mb-4">
-              <div class="feature-icon-box mb-0">
-                <i class="fab fa-windows"></i>
-              </div>
-              <div>
-                <h4 class="text-white mb-0">Windows PC &amp; OBS Studio</h4>
-                <span class="text-muted-custom fs-xs">MobCam OBS Studio 64-bit Plugin</span>
-              </div>
-            </div>
-
-            <table class="table table-dark table-borderless fs-sm mb-0">
-              <tbody>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Operating System</td>
-                  <td class="text-white fw-bold py-2">Windows 10 64-bit / Windows 11 64-bit</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">OBS Studio Version</td>
-                  <td class="text-white fw-bold py-2">OBS Studio 28.0, 29.0, 30.0, 31.0+ (64-bit native)</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Color Rendering</td>
-                  <td class="text-white fw-bold py-2">Direct YUV420 to RGB conversion with zero chroma ghosting</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Connection Modes</td>
-                  <td class="text-white fw-bold py-2">Ultra-Low Latency Mode via Wi-Fi (5 GHz) or USB Cable</td>
-                </tr>
-                <tr class="border-bottom border-secondary">
-                  <td class="text-muted-custom py-2">Firewall Ports</td>
-                  <td class="text-white fw-bold py-2">Port 4747 (Inbound TCP Stream), Port 4752 (In-OBS Web Dock)</td>
-                </tr>
-                <tr>
-                  <td class="text-muted-custom py-2">Developer / Support</td>
-                  <td class="text-white fw-bold py-2">Yash Rayjada &bull; <a href="mailto:info@ybrdigital.in" class="text-green text-decoration-none">info@ybrdigital.in</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ====================================================================
-       Community Reviews & Creator Testimonials
-       ==================================================================== -->
-  <section class="py-5" id="reviews" style="background: linear-gradient(180deg, transparent 0%, rgba(0, 230, 118, 0.02) 50%, transparent 100%);">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-          Trusted by Creators Worldwide
-        </span>
-        <h2 class="h1 fw-bold text-white mb-3">What Streamers Are Saying</h2>
-        <p class="text-muted-custom">
-          See how MobCam empowers broadcasters, gaming creators, and podcasters.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Review 1 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="review-card">
-            <div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "The ultra-low latency performance completely sold me. In competitive FPS tournaments, audio/video lip sync is crucial. MobCam outperforms my dedicated $200 webcam by a mile."
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-avatar">AK</div>
-              <div>
-                <div class="author-name">Alex K.</div>
-                <div class="author-role">Twitch Partner &bull; FPS Streamer</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="review-card">
-            <div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Having the OBS Quick Controls dock right inside my OBS interface is pure genius. I can zoom in on my hardware builds without even touching the phone stand."
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-avatar">MR</div>
-              <div>
-                <div class="author-name">Marcus R.</div>
-                <div class="author-role">Tech YouTuber &bull; 150K Subs</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="review-card">
-            <div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "4K 60FPS looks unreal on my Android phone. The colors look natural with the hardware color pipeline, and the auto-landscape locking eliminates any orientation headaches."
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-avatar">SL</div>
-              <div>
-                <div class="author-name">Samantha L.</div>
-                <div class="author-role">Content Creator &bull; Just Chatting</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="review-card">
-            <div>
-              <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Solid build quality, clean setup installer, and outstanding developer responsiveness. MobCam has completely upgraded my podcast recording workflow."
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-avatar">DP</div>
-              <div>
-                <div class="author-name">David P.</div>
-                <div class="author-role">Podcast Host &bull; Audio Engineer</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       Frequently Asked Questions (FAQ) Accordion
-       ==================================================================== -->
-  <section class="py-5" id="faq">
-    <div class="container py-4">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="badge bg-dark border border-secondary text-green px-3 py-2 rounded-pill fs-xs text-uppercase fw-bold mb-2">
-          Got Questions?
-        </span>
-        <h2 class="h1 fw-bold text-white mb-3">Frequently Asked Questions</h2>
-        <p class="text-muted-custom">
-          Everything you need to know about setting up and using MobCam - OBS Studio Camera.
+  <section class="section-py" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about MobCam, the OBS Studio plugin, and supported features.
         </p>
       </div>
 
       <div class="row justify-content-center">
         <div class="col-lg-9">
           <div class="accordion accordion-custom" id="faqAccordion">
-            <!-- Question 1 -->
+
+            <!-- FAQ 1 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
-                  How is MobCam different from regular virtual webcam apps?
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is MobCam?
                 </button>
               </h2>
-              <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Unlike traditional tools that emulate a virtual web camera driver, MobCam provides a <strong>direct OBS Studio source plugin</strong>. This eliminates double-encoding and virtual driver latency, providing direct GPU-accelerated YUV420 color rendering and native in-OBS remote controls via our browser dock.
+                  MobCam is a high-performance streaming camera solution that turns your Android smartphone into a studio-grade camera source for OBS Studio. It captures hardware-accelerated video (up to 4K 60 FPS) and synchronized audio, transmitting them directly over 5 GHz Wi-Fi or wired USB to a native OBS Studio plugin on Windows.
                 </div>
               </div>
             </div>
 
-            <!-- Question 2 -->
+            <!-- FAQ 2 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
-                  How does Ultra-Low Latency streaming work with Wi-Fi and USB?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Is MobCam free?
                 </button>
               </h2>
-              <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  MobCam is built from the ground up with a custom real-time streaming engine. Ultra-Low Latency Mode is active across both <strong>5 GHz Wi-Fi</strong> and <strong>wired USB tethering</strong>. For the absolute cleanest wired connection and simultaneous phone charging, plug in via USB tethering; for wire-free convenience, connect over high-speed Wi-Fi with instant lip-sync.
+                  Yes! The MobCam OBS Studio Windows plugin is 100% free and open-source under the GPL-2.0-or-later license. The MobCam Android application offers a free version on Google Play with optional premium upgrades for creators seeking maximum control and resolution presets.
                 </div>
               </div>
             </div>
 
-            <!-- Question 3 -->
+            <!-- FAQ 3 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
-                  How does the OBS Quick Controls Dock work?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Which OBS versions are supported?
                 </button>
               </h2>
-              <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  When you install the plugin, a local control server runs on your PC at <code>http://localhost:4752/</code>. In OBS Studio, open <strong>Docks &gt; MobCam Controls</strong>. You can remotely toggle the phone flashlight/torch, switch zoom magnification (1.0x, 1.5x, 2.0x), set autofocus modes, and adjust exposure without touching the phone stand during live broadcasts.
+                  The MobCam plugin supports OBS Studio 28.0 through 31.0+ (64-bit native) on Windows 10 and Windows 11. 32-bit OBS is not supported.
                 </div>
               </div>
             </div>
 
-            <!-- Question 4 -->
+            <!-- FAQ 4 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
-                  Does MobCam support 60 FPS and 4K UHD?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Does MobCam support USB?
                 </button>
               </h2>
-              <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Yes! MobCam supports resolutions from standard 720p and 1080p Full HD up to <strong>4K UHD (2160p)</strong>, along with ultra-smooth <strong>60 FPS</strong> streaming when supported by your phone camera hardware.
+                  Yes! MobCam supports wired USB connections via Android USB Tethering or ADB reverse port forwarding (<code class="text-green">127.0.0.1:4747</code>). A wired USB connection provides the lowest possible latency and immune stability against wireless network congestion.
                 </div>
               </div>
             </div>
 
-            <!-- Question 5 -->
+            <!-- FAQ 5 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
-                  Is an internet connection required to stream?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Does MobCam support Wi-Fi?
                 </button>
               </h2>
-              <div id="faqFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  No. MobCam streams directly peer-to-peer over your local Wi-Fi router or USB tethered cable. None of your video or audio frames are ever sent over external cloud servers or public internet routes.
+                  Yes! MobCam connects over local Wi-Fi networks. We strongly recommend a 5 GHz Wi-Fi connection for stable 1080p and 4K 60 FPS streaming. The plugin includes automatic UDP broadcast discovery on port 4748 to detect your phone automatically.
                 </div>
               </div>
             </div>
 
-            <!-- Question 6 -->
+            <!-- FAQ 6 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
-                  How do I download previous versions of the OBS plugin?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  How do I install the OBS plugin?
                 </button>
               </h2>
-              <div id="faqSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Navigate to the <a href="#releases" class="text-green text-decoration-none smooth-scroll">All Versions &amp; Release Notes</a> section on this page. All past releases are permanently archived with installer links, manual checksums, and changelogs.
+                  Simply download <code class="text-green">MobCam-OBS-Plugin-v1.0.0-Setup.exe</code>, close OBS Studio, and run the installer. Once complete, open OBS Studio and find <strong>MobCam Source</strong> under the Sources list.
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ====================================================================
-       Call-to-Action Banner
-       ==================================================================== -->
-  <section class="py-5">
-    <div class="container">
-      <div class="p-5 rounded-4 text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, #131B26 0%, #0E141C 100%); border: 1.5px solid rgba(0, 230, 118, 0.35); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 230, 118, 0.1);">
-        <h2 class="display-6 fw-bold text-white mb-3">Ready to Elevate Your Stream Quality?</h2>
-        <p class="text-muted-custom fs-5 max-w-700 mx-auto mb-4">
-          Download MobCam today and upgrade your broadcast setup in minutes.
-        </p>
-
-        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-          <a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="btn-primary-green download-btn px-4 py-3" download data-version="1.0.0">
-            <i class="fab fa-windows fs-5"></i> Download OBS Plugin (v1.0.0)
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="btn-playstore px-4 py-2">
-            <i class="fab fa-google-play fs-3 text-green"></i>
-            <div class="text-start">
-              <span class="store-sub">GET IT ON</span>
-              <span class="store-title d-block">Google Play</span>
+            <!-- FAQ 7 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Where can I find the source code?
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  The complete C source code for the MobCam OBS Studio plugin is hosted on GitHub at <a href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer" class="text-green">https://github.com/ybrdigital/mobcam</a>.
+                </div>
+              </div>
             </div>
-          </a>
+
+            <!-- FAQ 8 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Is the Android app open source?
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No. The MobCam Android mobile application and cloud backend are proprietary products developed by YBR Digital and distributed through the Google Play Store. This public open-source repository contains the native OBS Studio plugin and its official documentation.
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
@@ -840,89 +730,94 @@
   <!-- ====================================================================
        Footer
        ==================================================================== -->
-  <footer class="footer-custom">
+  <footer class="footer-custom" id="support">
     <div class="container">
       <div class="row g-4 justify-content-between">
         <div class="col-lg-4">
           <div class="footer-brand">
-            <img src="assets/img/logo.png" alt="MobCam Logo">
-            <span>MobCam - OBS Studio Camera</span>
+            <img src="assets/img/logo.png" alt="MobCam Logo" width="36" height="36" class="rounded-3">
+            <span>MobCam</span>
           </div>
           <p class="text-muted-custom fs-sm mb-3">
-            Transform your Android smartphone into a studio-grade camera for OBS Studio with ultra-low latency streaming and integrated in OBS Studio quick controls.
+            OBS Studio Camera for Android. High-performance video and audio streaming engineered for creators, streamers, and video broadcast professionals.
           </p>
-          <div class="d-flex align-items-center gap-3">
-            <a href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer" class="text-muted-custom hover-green fs-5" title="GitHub Repository">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:info@ybrdigital.in" class="text-muted-custom hover-green fs-5" title="Email Support">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="text-muted-custom hover-green fs-5" title="Google Play Store">
-              <i class="fab fa-google-play"></i>
-            </a>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-dark border border-secondary text-dim fs-xs">Brand: YBR Digital</span>
+            <span class="badge bg-dark border border-secondary text-dim fs-xs">License: GPL-2.0-or-later</span>
           </div>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="text-white fw-bold mb-3 fs-sm text-uppercase tracking-wider">Navigation</h6>
-          <ul class="list-unstyled mb-0">
-            <li><a href="#features" class="footer-link">Features</a></li>
-            <li><a href="#how-it-works" class="footer-link">Setup Guide</a></li>
-            <li><a href="#plugin" class="footer-link">OBS Studio Plugin</a></li>
-            <li><a href="#releases" class="footer-link">Version Archive</a></li>
-            <li><a href="#specs" class="footer-link">Tech Specs</a></li>
+        <div class="col-sm-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3 fs-sm text-uppercase">Navigation</h6>
+          <ul class="footer-links-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#download">Download Plugin</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="text-white fw-bold mb-3 fs-sm text-uppercase tracking-wider">Downloads</h6>
-          <ul class="list-unstyled mb-0">
-            <li><a href="assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe" class="footer-link download-btn" download data-version="1.0.0">OBS Studio Plugin Installer</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer" class="footer-link">Google Play Store</a></li>
+        <div class="col-sm-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3 fs-sm text-uppercase">Open Source &amp; Docs</h6>
+          <ul class="footer-links-list">
+            <li><a href="https://github.com/ybrdigital/mobcam" target="_blank" rel="noopener noreferrer"><i class="fab fa-github me-1"></i> GitHub Repository</a></li>
+            <li><a href="https://github.com/ybrdigital/mobcam/blob/main/docs/installation.md" target="_blank" rel="noopener noreferrer"><i class="fas fa-book me-1"></i> Installation Guide</a></li>
+            <li><a href="https://github.com/ybrdigital/mobcam/blob/main/docs/troubleshooting.md" target="_blank" rel="noopener noreferrer"><i class="fas fa-wrench me-1"></i> Troubleshooting</a></li>
+            <li><a href="https://github.com/ybrdigital/mobcam/blob/main/docs/development.md" target="_blank" rel="noopener noreferrer"><i class="fas fa-code me-1"></i> Developer Architecture</a></li>
+            <li><a href="https://github.com/ybrdigital/mobcam/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><i class="fas fa-scale-balanced me-1"></i> GPL-2.0-or-later License</a></li>
+            <li><a href="https://github.com/ybrdigital/mobcam/blob/main/THIRD_PARTY_LICENSES.md" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-contract me-1"></i> Third-Party Notices</a></li>
           </ul>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <h6 class="text-white fw-bold mb-3 fs-sm text-uppercase tracking-wider">Support &amp; Legal</h6>
-          <ul class="list-unstyled mb-3">
-            <li class="mb-2 text-muted-custom fs-sm">
-              <i class="fas fa-envelope text-green me-2"></i>
-              <a href="mailto:info@ybrdigital.in" class="text-green text-decoration-none fw-semibold">info@ybrdigital.in</a>
-            </li>
-            <li class="mb-2 text-muted-custom fs-sm">
-              <i class="fas fa-user-check text-green me-2"></i>
-              <span>Developed by <strong class="text-white">Yash Rayjada</strong></span>
-            </li>
+        <div class="col-sm-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3 fs-sm text-uppercase">Support &amp; Legal</h6>
+          <ul class="footer-links-list">
+            <li><a href="mailto:info@ybrdigital.in"><i class="far fa-envelope me-1"></i> info@ybrdigital.in</a></li>
+            <li><a href="https://www.ybrdigital.in" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe me-1"></i> YBR Digital Website</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.ybrdigital.mobcam" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play me-1"></i> Google Play Store</a></li>
+            <li><a href="privacy-policy.html"><i class="fas fa-shield-halved me-1"></i> Privacy Policy</a></li>
+            <li><a href="terms-of-service.html"><i class="fas fa-file-signature me-1"></i> Terms of Service</a></li>
           </ul>
-          <div class="d-flex align-items-center gap-3">
-            <a href="http://ybrdigital.in/mobcam/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-muted-custom fs-xs text-decoration-underline hover-green">Privacy Policy</a>
-            <span class="text-dim">&bull;</span>
-            <a href="https://ybrdigital.in/mobcam/terms-of-service" target="_blank" rel="noopener noreferrer" class="text-muted-custom fs-xs text-decoration-underline hover-green">Terms of Service</a>
-          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-2">
-          <p class="mb-0">&copy; <span id="currentYear"></span> MobCam - OBS Studio Camera. All rights reserved.</p>
+        <div class="row align-items-center">
+          <div class="col-md-7 mb-2 mb-md-0">
+            &copy; 2026 <strong>MobCam</strong> &bull; Developed by <strong>Yash Rayjada</strong> (<a href="https://www.ybrdigital.in" target="_blank" class="text-muted text-decoration-none">YBR Digital</a>). All rights reserved.
+          </div>
+          <div class="col-md-5 text-md-end">
+            <span class="text-dim fs-xs">
+              OBS&reg; and OBS Studio&reg; are registered trademarks of Wizards of OBS LLC.
+            </span>
+          </div>
         </div>
-        <p class="fs-xs text-dim mb-0">
-          Disclaimer: &ldquo;OBS&rdquo;, &ldquo;OBS Studio&rdquo;, and &ldquo;OBS Project&rdquo; are registered trademarks or trademarks of their respective owners. MobCam is an independent product and is not affiliated with, endorsed by, or sponsored by their respective owners.
-        </p>
       </div>
     </div>
   </footer>
 
-
   <!-- ====================================================================
-       JavaScript Dependencies (jQuery & Bootstrap 5 Bundle)
+       Screenshot Lightbox Modal
        ==================================================================== -->
-  <!-- jQuery 3.7.1 CDN -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <div class="modal fade" id="screenshotModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark border border-secondary">
+        <div class="modal-header border-bottom border-secondary py-2 px-3">
+          <h5 class="modal-title fs-6 text-white">Screenshot Preview</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-1 text-center">
+          <img src="" alt="" class="modal-screenshot-img img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap 5.3.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom Application Script -->
-  <script src="js/main.js?v=1.0.1"></script>
+
+  <!-- Custom Main JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>

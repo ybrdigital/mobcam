@@ -1,0 +1,55 @@
+name: Build MobCam OBS Studio Plugin
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'plugin/**'
+      - '.github/workflows/build-plugin.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'plugin/**'
+      - '.github/workflows/build-plugin.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Windows 64-bit Plugin
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup MSVC & Developer Environment
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Configure CMake
+        working-directory: plugin
+        run: |
+          cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build Plugin (MSVC Release)
+        working-directory: plugin
+        run: |
+          cmake --build build --config Release --verbose
+
+      - name: Verify Binary
+        working-directory: plugin
+        shell: pwsh
+        run: |
+          $dllPath = "build/bin/Release/mobcam.dll"
+          if (-not (Test-Path $dllPath)) {
+            throw "Error: mobcam.dll was not generated at $dllPath"
+          }
+          $hash = (Get-FileHash $dllPath -Algorithm SHA256).Hash
+          Write-Host "mobcam.dll SHA-256: $hash"
+
+      - name: Upload Plugin Binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: mobcam-obs-plugin-x64-dll
+          path: plugin/build/bin/Release/mobcam.dll

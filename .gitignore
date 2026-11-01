@@ -1,0 +1,49 @@
+# Build output directories
+build/
+bin/
+obj/
+x64/
+x86/
+[Dd]ebug/
+plugin/build/
+plugin/bin/
+plugin/installer/Output/
+
+# Visual Studio temporary files
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.opendb
+*.db
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Secret & proprietary protection
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+google-services.json
+*.env
+*.env.*
+*.secret
+*credentials*
+*token*
+
+# Android / Mobile proprietary artifacts (Android app is proprietary and hosted on Google Play)
+*.aab
+*.apk
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini

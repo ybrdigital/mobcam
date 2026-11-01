@@ -1,0 +1,16 @@
+{
+  "product": "MobCam OBS Studio Plugin",
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "releaseDate": "September 25, 2026",
+  "windowsCompatibility": "Windows 10 / Windows 11 (64-bit)",
+  "obsCompatibility": "OBS Studio 28.0 - 31.0+ (64-bit)",
+  "architecture": "x64",
+  "installerFilename": "MobCam-OBS-Plugin-v1.0.0-Setup.exe",
+  "installerPath": "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
+  "downloadUrl": "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
+  "githubReleaseUrl": "https://github.com/ybrdigital/mobcam/releases",
+  "fileSize": "2.1 MB",
+  "fileSizeBytes": 2144071,
+  "sha256": "A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB"
+}
