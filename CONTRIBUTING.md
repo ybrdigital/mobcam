@@ -36,7 +36,7 @@ To help diagnose problems effectively, please include:
 Under the terms of the **GPL-2.0-or-later**, anyone is legally entitled to inspect, fork, modify, and redistribute the plugin source code in accordance with the license.
 
 - **Independent Forks**: If you choose to fork or modify the software under the GPL, your fork represents an independent derivative work and is not an official MobCam release.
-- **Trademarks & Attribution**: The "MobCam" name, logo artwork, and brand assets are proprietary trademarks of YBR Digital. Forks or derivative distributions must not use official MobCam branding or imply endorsement, sponsorship, or association with YBR Digital.
+- **Brand Identity & Attribution**: The "MobCam" name, logo artwork, and visual brand assets are proprietary property and copyrighted works of YBR Digital. Forks or derivative distributions must not use official MobCam branding or logos in a manner that implies endorsement, sponsorship, or official affiliation with YBR Digital.
 - **Technical Note on GitHub Forks**: While public GitHub repositories inherently allow users to create forks via the GitHub platform, only builds published from the official upstream repository are recognized as authentic MobCam releases.
 
 ---

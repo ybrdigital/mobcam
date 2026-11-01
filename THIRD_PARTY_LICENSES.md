@@ -92,7 +92,7 @@ Under the terms of the **GNU General Public License v2.0 or later (GPL-2.0-or-la
 ## 4. Proprietary Notice: MobCam Android Application & Brand Assets
 
 - **Proprietary Android Application**: The **MobCam Android Mobile Application** is a proprietary commercial product of **YBR Digital** and is **not** licensed under the GPL. It is distributed through the Google Play Store. The plugin communicates with the Android app over an independently specified local network protocol; this communication across independent network sockets does not subject the proprietary mobile app to the GPL.
-- **Brand & Trademarks**: The name "MobCam", logo artwork, icons, website design, and documentation styling remain the exclusive proprietary assets and trademarks of YBR Digital and are not covered by the GPL.
+- **Brand Assets & Identity**: The name "MobCam", product logos, icon artwork, website design, and documentation styling remain the exclusive proprietary brand assets and copyrighted property of YBR Digital, and are not covered by the GPL. Independent forks or derivative distributions must not use official MobCam branding or logos in a manner that implies endorsement, sponsorship, or official affiliation.
 
 ---
 

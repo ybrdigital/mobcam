@@ -180,8 +180,8 @@ The **MobCam OBS Studio Plugin** (native C source code, build scripts, and cover
 ### Private Proprietary Components
 The **MobCam Android Mobile Application** distributed through the Google Play Store is a proprietary commercial product of **YBR Digital** and is **not** licensed under the GPL. The plugin communicates with the Android application over an independent local TCP/UDP network protocol; this communication across independent network sockets does not subject the proprietary mobile app to the GPL.
 
-### Trademarks & Brand Assets
-The "MobCam" name, logo artwork, icons, marketing imagery, and website styling remain the exclusive proprietary property of **YBR Digital** and are not licensed under the GPL.
+### Brand Assets & Identity
+The "MobCam" name, logo artwork, icons, marketing imagery, and website styling remain the exclusive proprietary property and copyrighted works of **YBR Digital** and are not licensed under the GPL. Independent forks or derivative distributions must not use official MobCam branding in a manner that implies endorsement or official affiliation.
 
 ---
 
