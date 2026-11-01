@@ -77,28 +77,94 @@ The MobCam communication pipeline is divided across distinct ports:
 | **4749** | TCP | Outbound from PC | Android App | OBS Plugin (`media_client.c`) | AAC audio stream | Fixed |
 | **4752** | HTTP | Loopback (`127.0.0.1`) | OBS Plugin (`web_control_server.c`) | OBS Browser Dock | Quick Controls web interface | Fixed |
 
-### 3.1 UDP Auto-Discovery (Port 4750)
-The Android device periodically broadcasts a UDP JSON beacon announcing device availability:
+### 3.1 UDP Auto-Discovery Beacon (Port 4750)
+The Android device periodically broadcasts a UDP JSON beacon every 1200ms to port `4750` across all active network interfaces (Wi-Fi subnet broadcast and USB tethering interface):
 ```json
 {
-  "service": "mobcam",
-  "version": "1.0.0",
-  "deviceName": "Pixel 8 Pro",
-  "ip": "192.168.1.45",
+  "app": "mobcam",
+  "id": "a1b2c3d4e5f6",
+  "name": "MobCam (Pixel 8 Pro)",
+  "device": "Google Pixel 8 Pro",
   "port": 4747,
-  "httpPort": 4752
+  "transport": "wifi",
+  "ip": "192.168.1.45"
 }
 ```
-The plugin's discovery thread listens on UDP port `4750`, parses the beacon, and populates the OBS source property dropdown.
+*Fields*:
+- `app`: Always `"mobcam"` identifier.
+- `id`: Stable 12-character unique device identifier.
+- `name`: Human-readable device display name.
+- `device`: Hardware manufacturer and model.
+- `port`: TCP control port running on the phone (defaults to `4747`).
+- `transport`: `"wifi"` or `"usb"` (indicates whether beacon was sent over wireless LAN or wired USB tethering).
+- `ip`: Direct IP address of the smartphone interface.
 
-### 3.2 TCP Control Handshake (Port 4747)
-The plugin establishes a direct low-latency TCP control connection to the phone on port `4747` for JSON-formatted commands (torch toggles, zoom levels, exposure values, and connection lifecycle).
+The plugin's discovery thread (`discovery_listener.c`) binds to `0.0.0.0:4750`, parses the beacon, distinguishes between Wi-Fi and USB addresses, and populates the OBS source property dropdown. Additionally, the Android app announces via Android NSD (`_mobcam._tcp.` on port 4747).
+
+### 3.2 TCP Control Channel (Port 4747)
+The control connection is a persistent TCP socket operating over newline-delimited UTF-8 JSON (`\n` terminated).
+
+1. **Hello Handshake (Phone -> Plugin)**:  
+   Immediately upon socket connection, the phone transmits its hardware profile and active stream state:
+   ```json
+   {
+     "device": "Google Pixel 8 Pro",
+     "app_version": "1.0.0",
+     "cameras": ["back", "front"],
+     "max_res": "3840x2160",
+     "max_zoom": 8.0,
+     "has_torch": true,
+     "is_pro": true,
+     "rotation": 0,
+     "resolution": "1920x1080",
+     "fps": 60,
+     "bitrate_kbps": 12000,
+     "latency_mode": "ultra_low",
+     "audio": true,
+     "codec": "h264"
+   }
+   ```
+
+2. **Stream Configuration Negotiation (Plugin -> Phone)**:  
+   The plugin verifies capability parameters and negotiates stream properties:
+   ```json
+   {
+     "type": "config",
+     "resolution": "1920x1080",
+     "fps": 60,
+     "bitrate_kbps": 12000,
+     "codec": "h264",
+     "audio": true,
+     "camera": "back"
+   }
+   ```
+
+3. **Remote Control Commands (Plugin -> Phone)**:  
+   Triggered via the In-OBS Quick Controls dock:
+   - **Flashlight / Torch**: `{"type":"torch","enabled":true}`
+   - **Zoom Preset**: `{"type":"zoom","value":1.5}`
+   - **Exposure Compensation**: `{"type":"exposure","value":2}`
+   - **Camera Facing**: `{"type":"camera","facing":"back"}`
+   - **White Balance**: `{"type":"wb","value":"auto"}`
 
 ### 3.3 TCP Media Streams (Video Port 4748, Audio Port 4749)
-Dedicated TCP media connections receive binary framed stream data:
-- **Frame Length**: 4 bytes (Big Endian `uint32_t`)
-- **Presentation Timestamp (PTS)**: 8 bytes (`int64_t` microseconds)
-- **Payload**: Raw H.264/HEVC NAL units on port 4748, or raw AAC audio packets on port 4749.
+High-performance video and audio streaming use separate dedicated TCP client sockets to ensure audio packets are never blocked behind large video I-frames.
+
+Each binary frame follows a strict 12-byte header framing:
+```
++-----------------------------------+-----------------------------------+
+|     Payload Length (4 Bytes)      |   Presentation Timestamp (8 Bytes)|
+|       uint32_t (Big-Endian)       |       int64_t (Microseconds)      |
++-----------------------------------+-----------------------------------+
+|                         Frame Payload Data                            |
+|             (Raw H.264/HEVC NAL Units or AAC Audio Packets)           |
++-----------------------------------------------------------------------+
+```
+- **Port 4748 (Video Stream)**: Receives raw H.264 or HEVC NAL units formatted in standard Annex B format (`00 00 01` or `00 00 00 01` start codes), parsed and decoded into YUV420 planar frames by `h264_decoder.c`.
+- **Port 4749 (Audio Stream)**: Receives raw AAC audio packets, decoded by `aac_decoder.c` into 48 kHz stereo floating-point PCM audio and sent to `obs_source_output_audio`.
+
+### 3.4 In-OBS Quick Controls Dock (HTTP Port 4752)
+The plugin hosts an internal embedded web server listening strictly on IPv4 loopback (`127.0.0.1:4752` / `localhost:4752`). It serves an HTML5/CSS/JavaScript control panel embedded into OBS Studio as a native Custom Browser Dock (`Docks > MobCam Controls`), allowing streamers to control zoom, torch, exposure, and focus without taking their hands off the streaming workstation.
 
 ---
 
